@@ -9,6 +9,12 @@ import {
   SimpleListItem,
   CollapsibleList
 } from './';
+import { 
+  Checkbox
+} from '../checkbox';
+import { 
+  Radio
+} from '../radio';
 
 describe('List', () => {
   it('renders', () => {
@@ -34,7 +40,7 @@ describe('List', () => {
     let clickedIndex;
 
     const el = mount(
-      <List onAction={(evt) => (clickedIndex = evt.detail)}>
+      <List onAction={evt => (clickedIndex = evt.detail)}>
         <ListItem>
           <ListItemPrimaryText>Cookies</ListItemPrimaryText>
         </ListItem>
@@ -46,6 +52,60 @@ describe('List', () => {
 
     el.find(ListItem).last().simulate('click');
     expect(clickedIndex).toEqual({ index: 1 });
+  });
+
+
+
+  it('has right role when having selectedIndex', () => {
+    const el = mount(<List selectedIndex={1}>
+        <ListItem>Pizza</ListItem>
+        <ListItem>Cookies</ListItem>
+        <ListItem>IceCream</ListItem>
+        </List>);
+    
+    expect(el.find('ul').props().role).toEqual('listbox')
+
+  });
+
+  it('role set by user is not overwritten', () => {
+    const el = mount(<List role="menu" selectedIndex={1}>
+        <ListItem>Pizza</ListItem>
+        <ListItem>Cookies</ListItem>
+        <ListItem>IceCream</ListItem>
+        </List>);
+    
+    expect(el.find('ul').props().role).toEqual('menu')
+
+  });
+
+  it('has the right role when ListItem has checkboxs', () => {
+    const el = mount(
+          <List>
+      {['Cookies', 'Pizza', 'Icecream'].map(key => (
+        <ListItem key={key} >{key}
+          <ListItemMeta>
+            <Checkbox readOnly />
+          </ListItemMeta>
+        </ListItem>
+      ))}
+    </List>);
+    
+    expect(el.find('ul').props().role).toEqual('group')
+  });
+
+  it('has the right role when ListItem has radios', () => {
+    const el = mount(
+          <List>
+      {['Cookies', 'Pizza', 'Icecream'].map(key => (
+        <ListItem key={key} >{key}
+          <ListItemMeta>
+            <Radio readOnly />
+          </ListItemMeta>
+        </ListItem>
+      ))}
+    </List>);
+    
+    expect(el.find('ul').props().role).toEqual('radiogroup')
   });
 
   it('SimpleListItem renders', () => {
@@ -183,3 +243,57 @@ describe('Collapsible List', () => {
     }, 500);
   });
 });
+
+describe('ListItem', () => {
+  it('has the right role when containing selectedIndex', () => {
+    const el = mount(<List selectedIndex={1}>
+        <ListItem>Pizza</ListItem>
+        <ListItem>Cookies</ListItem>
+        <ListItem>IceCream</ListItem>
+        </List>);
+    
+    expect(el.find('li').first().props().role).toEqual('option')
+
+  });
+  
+  it('role set by user is not overwritten', () => {
+    const el = mount(<List selectedIndex={1}>
+        <ListItem role="menuitem">Pizza</ListItem>
+        <ListItem>Cookies</ListItem>
+        <ListItem>IceCream</ListItem>
+        </List>);
+    
+    expect(el.find('li').first().props().role).toEqual('menuitem')
+  });
+
+  it('has the right role when ListItem has checkboxs', () => {
+    const el = mount(
+          <List>
+      {['Cookies', 'Pizza', 'Icecream'].map(key => (
+        <ListItem key={key} >{key}
+          <ListItemMeta>
+            <Checkbox readOnly />
+          </ListItemMeta>
+        </ListItem>
+      ))}
+    </List>);
+
+    expect(el.find('li').first().props().role).toEqual('checkbox')
+  });
+
+  it('has the right role when ListItem has radios', () => {
+    const el = mount(
+          <List>
+      {['Cookies', 'Pizza', 'Icecream'].map(key => (
+        <ListItem key={key} >{key}
+          <ListItemMeta>
+            <Radio readOnly />
+          </ListItemMeta>
+        </ListItem>
+      ))}
+    </List>);
+    
+    expect(el.find('ul').first().props().role).toEqual('radiogroup')
+  });
+
+})

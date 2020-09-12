@@ -1,9 +1,10 @@
 import * as RMWC from '@rmwc/types';
 import React from 'react';
 
-import { classNames, useClassNames, Tag, createComponent } from '@rmwc/base';
+import { classNames, useClassNames, Tag, createComponent, mergeRefs } from '@rmwc/base';
 import { withRipple } from '@rmwc/ripple';
 import { Icon, IconProps } from '@rmwc/icon';
+import { ListContext } from './list-context';
 
 /** A ListItem component. */
 export interface ListItemProps extends RMWC.WithRippleProps {
@@ -18,20 +19,54 @@ export interface ListItemProps extends RMWC.WithRippleProps {
 /** A ListItem component. */
 export const ListItem = withRipple({ surface: false })(
   createComponent<ListItemProps>(function ListItem(props, ref) {
+    const liRef = React.createRef();
+    const finalRef = ref ? mergeRefs(ref,liRef) : liRef
+        
+    const context = React.useContext(ListContext);
+    const [index, setIndex] = React.useState<number>(-1);
+
+    const getIndex = React.useCallback((): number => {
+        const listElements: HTMLLIElement[] = 
+        getListElements(liRef.current as HTMLLIElement);
+      if (listElements) {
+        return listElements.indexOf(liRef.current as HTMLLIElement);
+      }
+      return -1
+    },[liRef])
+
+    const getListElements = (li: HTMLLIElement): HTMLLIElement[]  =>  {
+      if (li) {
+        return [].slice.call(li.parentNode?.querySelectorAll('.mdc-list-item'));
+      }
+      return []; 
+    }
+
+    React.useEffect(() => {
+      if (liRef.current && index === -1) { setIndex(getIndex()) }
+    }, [liRef, index, getIndex])
+
+    React.useEffect(() => {
+      if (index > -1 && props.disabled !== undefined) {
+        // let the foundation handle disabled items--it also handles aria updates
+        context.setEnabled(index,!props.disabled)
+      }
+    },[index, props.disabled, context])
+
     const { selected, activated, disabled, ...rest } = props;
     const className = useClassNames(props, [
-      'mdc-list-item',
+      'mdc-list-item',  ...context.getClassName(index),
       {
         'mdc-list-item--selected': props.selected,
         'mdc-list-item--activated': props.activated,
-        'mdc-list-item--disabled': props.disabled
       }
     ]);
-    return (
-      <Tag tag="li" tabIndex={0} {...rest} className={className} ref={ref} />
-    );
+    
+    return ( <Tag tag="li" tabIndex={0} {...rest} className={className} ref={finalRef} /> )
+
   })
 );
+
+ListItem.displayName = 'ListItem';
 
 /** Text Wrapper for the ListItem */
 export interface ListItemTextProps {}

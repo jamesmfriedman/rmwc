@@ -1,8 +1,10 @@
-import React, { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import { MDCListFoundation, MDCListAdapter } from '@material/list';
 import { matches, FoundationElement } from '@rmwc/base';
 import { useFoundation } from '@rmwc/base';
 import { ListProps, ListApi } from './list';
+
+interface ListItemClassesState  { [index: number]: string[] };
 
 export const useListFoundation = (props: ListProps & React.HTMLProps<any>) => {
   const listElements = useCallback((el: Element | null): HTMLLIElement[] => {
@@ -13,6 +15,10 @@ export const useListFoundation = (props: ListProps & React.HTMLProps<any>) => {
     }
     return [];
   }, []);
+
+  const [ listItemClasses, setListItemClasses ] =
+    useState<ListItemClassesState>({});
+  const [ role,setRole ] = useState<string|undefined>(undefined)
 
   const { foundation, ...elements } = useFoundation({
     props,
@@ -61,23 +67,37 @@ export const useListFoundation = (props: ListProps & React.HTMLProps<any>) => {
           if (attr === 'tabindex') {
             attr = 'tabIndex';
           }
-
           const element = listElements(rootEl.ref)[index];
           if (element) {
             element.setAttribute(attr, String(value));
           }
         },
         addClassForElementIndex: (index: number, className: string) => {
-          const element = listElements(rootEl.ref)[index];
-          if (element) {
-            element.classList.add(className);
-          }
+          setListItemClasses((listItems: ListItemClassesState) => {
+            if (listItems[index] && listItems[index].indexOf(className) > -1) {
+              // no dupes
+              return listItems
+            }
+
+            if ( listItems[index] 
+              && listItems[index].indexOf(className) === -1) {
+              return  {...listItems, [index]: [...listItems[index],className]}
+            } 
+
+            return {...listItems, [index]: [className]}
+          });
         },
         removeClassForElementIndex: (index: number, className: string) => {
-          const element = listElements(rootEl.ref)[index];
-          if (element) {
-            element.classList.remove(className);
-          }
+          setListItemClasses((listItems: ListItemClassesState) => {
+            if (listItems[index] && listItems[index].indexOf(className) > -1) {
+              return {
+                ...listItems, 
+                [index]: listItems[index].filter((name) => name !== className) 
+              }
+            }
+
+            return listItems
+          })
         },
         focusItemAtIndex: (index: number) => {
           const element = listElements(rootEl.ref)[index];
@@ -241,11 +261,47 @@ export const useListFoundation = (props: ListProps & React.HTMLProps<any>) => {
   rootEl.setProp('onKeyDown', handleKeydown, true);
   rootEl.setProp('onFocus', handleFocusIn, true);
   rootEl.setProp('onBlur', handleFocusOut, true);
+  
+  const initializeListRole = useCallback((): void=>  {
+      // regular list implicitly has role='list' and is not necessary to set
+      // checkbox list should be role='group'
+      // radio list should be role='radiogroup'
+      // else, role='listbox' if selectedIndex
+
+    if (props.role) { return setRole(props.role);  }
+    
+    if (!rootEl.ref) { return; }
+
+    const hasSelectedIndex_: boolean  = !!props.selectedIndex || 
+      !!rootEl.ref.querySelector(`
+        .${MDCListFoundation.cssClasses.LIST_ITEM_ACTIVATED_CLASS},
+        .${MDCListFoundation.cssClasses.LIST_ITEM_SELECTED_CLASS}
+      `);
+
+    const isCheckboxList_: boolean =  !!rootEl.ref.querySelector(
+      MDCListFoundation.strings.CHECKBOX_SELECTOR
+    );
+    const isRadioList_ : boolean = !!rootEl.ref.querySelector(
+      MDCListFoundation.strings.RADIO_SELECTOR
+    );
+
+    if (isCheckboxList_) {
+      return setRole('group');
+    }
+    if (isRadioList_) {
+      return setRole('radiogroup')
+    }
+
+    if (hasSelectedIndex_) {
+      return setRole('listbox');
+    }
+  },[props.role, props.selectedIndex, rootEl.ref])
 
   // layout on mount
   useEffect(() => {
     foundation.layout();
-  }, [foundation]);
+    initializeListRole()
+  }, [foundation, initializeListRole]);
 
   useEffect(() => {
     foundation.setWrapFocus(props.wrapFocus || props.wrapFocus === undefined);
@@ -257,5 +313,24 @@ export const useListFoundation = (props: ListProps & React.HTMLProps<any>) => {
     );
   }, [foundation, props.vertical]);
 
-  return { ...elements };
+  useEffect(() => {
+    if (props.selectedIndex !== undefined && props.selectedIndex > -1) { 
+      foundation.setSelectedIndex(props.selectedIndex)
+    }
+  }, [foundation, props.selectedIndex]);
+
+
+  useEffect((): void =>  {
+    if (role) {
+      foundation.setSingleSelection(role === 'listbox')
+    }
+  }, [foundation, role])
+
+  const setEnabled = (index: number, isEnabled: boolean) => {
+    foundation.setEnabled(index,isEnabled);
+  }
+
+
+
+  return { ...elements, listItemClasses, setEnabled, role};
 };

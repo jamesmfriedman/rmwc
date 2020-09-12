@@ -1,8 +1,9 @@
 import * as RMWC from '@rmwc/types';
 import React from 'react';
 import { MDCListFoundation } from '@material/list';
-import { Tag, useClassNames, createComponent } from '@rmwc/base';
+import { Tag, useClassNames, createComponent, getDisplayName } from '@rmwc/base';
 import { useListFoundation } from './foundation';
+import { ListContext } from './list-context';
 
 export type ListOnActionEventT = RMWC.CustomEventT<{ index: number }>;
 
@@ -28,6 +29,10 @@ export interface ListProps {
   wrapFocus?: boolean;
   /** Sets the lists vertical orientation. Defaults to true */
   vertical?: boolean;
+  /** sets the selectedIdex for singleSelection, radiogroup, or checkboxlist variants. Only supply number[] to checkboxlists */
+  selectedIndex?: number[] | number;
+  /** Children to render */
+  children?: React.ReactNode;
 }
 
 export interface ListApi {
@@ -54,9 +59,40 @@ export const List = createComponent<ListProps>(function List(props, ref) {
     nonInteractive,
     onAction,
     foundationRef,
+    wrapFocus,
+    vertical,
+    selectedIndex,
+    children,
     ...rest
   } = props;
-  const { rootEl } = useListFoundation(props);
+  const { rootEl, listItemClasses, setEnabled, role} = useListFoundation(props);
+
+  
+  const getListItemRole = (): {role?: string} => {
+    // TODO(mgr34): menuitems with checkboxs or radios should be
+    // menuitemcheckbox or menuitemradio respectively
+    // see: https://www.w3.org/TR/wai-aria-1.1/#menuitemcheckbox
+
+    if (role === 'group') {
+      return {role: 'checkbox'}
+    }
+
+    if (role === 'radiogroup') {
+      return {role: 'radio'}
+    }
+
+    if (role === 'listbox' ) {
+      return {role: 'option'}
+    }
+
+    return {}
+  };
+
+  const listItemValues = {
+    getClassName: (index: number): string[]  =>  listItemClasses[index] || [],
+    setEnabled
+  };
+
   const className = useClassNames(props, [
     'mdc-list',
     {
@@ -66,7 +102,37 @@ export const List = createComponent<ListProps>(function List(props, ref) {
       'mdc-list--non-interactive': nonInteractive
     }
   ]);
-  return (
-    <Tag tag="ul" {...rest} element={rootEl} className={className} ref={ref} />
-  );
+  
+  const needsListItemsWrapper = (): boolean => 
+    ['group','radiogroup','listbox'].some(val => val === role)
+
+  const isListItem = (child: React.ReactNode) =>
+    getDisplayName(child) === 'ListItem';
+
+  const addRole = (child: React.ReactNode) => {
+    if (isListItem(child)) {
+        return React.cloneElement(child as React.ReactElement<any>, {
+          ...getListItemRole(),
+          ...(React.isValidElement(child) ? (child.props as Object) : {}),
+        })
+      }
+
+      return child
+  }
+
+  return  (
+    <ListContext.Provider value={listItemValues}>
+      <Tag 
+        tag="ul" 
+        {...rest} 
+        element={rootEl} 
+        role={role}
+        className={className} 
+        ref={ref} 
+      >{needsListItemsWrapper 
+        ? React.Children.map(children, addRole)
+        : children}
+      </Tag>
+    </ListContext.Provider>
+  )
 });
