@@ -17,7 +17,7 @@ import { List, ListItem } from '../list';
 
 import { Button } from '../button';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Drawers"

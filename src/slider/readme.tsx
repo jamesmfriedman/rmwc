@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { Slider } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Sliders"
@@ -34,8 +34,8 @@ export default function() {
       </DocsP>
       <DocsExample label="Uncontrolled">
         <Slider
-          onInput={evt => console.log(evt)}
-          onChange={evt => console.log(evt)}
+          onInput={(evt) => console.log(evt)}
+          onChange={(evt) => console.log(evt)}
         />
       </DocsExample>
       <DocsExample label="Controlled">
@@ -46,8 +46,8 @@ export default function() {
           return (
             <Slider
               value={value}
-              onChange={evt => setValue(evt.detail.value)}
-              onInput={evt => setValue(evt.detail.value)}
+              onChange={(evt) => setValue(evt.detail.value)}
+              onInput={(evt) => setValue(evt.detail.value)}
               discrete
               step={1}
             />

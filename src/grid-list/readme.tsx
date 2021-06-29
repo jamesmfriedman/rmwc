@@ -18,7 +18,7 @@ import {
 import { Checkbox } from '../checkbox';
 import { Select } from '../select';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Grid Lists"
@@ -71,11 +71,11 @@ export default function() {
                 'headerCaption',
                 'twoLineCaption',
                 'withIconAlignStart'
-              ].map(key => (
+              ].map((key) => (
                 <Checkbox
                   key={key}
                   label={key}
-                  onChange={evt =>
+                  onChange={(evt) =>
                     setState({ ...state, [key]: evt.currentTarget.checked })
                   }
                 />
@@ -83,7 +83,7 @@ export default function() {
 
               <Select
                 value={state.tileAspect}
-                onChange={evt =>
+                onChange={(evt) =>
                   setState({
                     ...state,
                     tileAspect: String(evt.currentTarget.value)

@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { Elevation } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Elevation"
@@ -67,7 +67,7 @@ export default function() {
   );
 }
 
-export const galleryExample = [2, 24].map(num => (
+export const galleryExample = [2, 24].map((num) => (
   <Elevation
     key={num}
     z={num}

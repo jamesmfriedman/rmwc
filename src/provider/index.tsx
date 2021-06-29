@@ -1,10 +1,6 @@
 import React from 'react';
 import * as RMWC from '@rmwc/types';
 
-// prettier-ignore
-// eslint-disable-next-line max-len
-type IconStrategyT = 'auto' | 'ligature' | 'className' | 'url' | 'component' | 'custom';
-
 type TooltipActivationT = 'hover' | 'click' | 'focus';
 
 type TooltipAlignT =

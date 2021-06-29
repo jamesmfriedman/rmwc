@@ -225,12 +225,13 @@ export const useMenuSurfaceFoundation = (
 
   const { rootEl } = elements;
 
+  const { onKeyDown } = props;
   const handleKeydown = useCallback(
     (evt: React.KeyboardEvent & KeyboardEvent) => {
-      props.onKeyDown?.(evt);
+      onKeyDown?.(evt);
       foundation.handleKeydown(evt);
     },
-    [props.onKeyDown, foundation]
+    [onKeyDown, foundation]
   );
 
   rootEl.setProp('onKeyDown', handleKeydown, true);

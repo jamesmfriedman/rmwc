@@ -9,7 +9,7 @@ import { Button } from '../button';
 import { Radio } from '../radio';
 import { Checkbox } from '../checkbox';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Theming"

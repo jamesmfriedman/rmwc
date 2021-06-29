@@ -16,7 +16,7 @@ import {
 import { Button } from '../button';
 import { createDialogQueue, DialogQueue } from './dialog-queue';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Dialogs"
@@ -39,11 +39,11 @@ export default function() {
             <>
               <Dialog
                 open={open}
-                onClose={evt => {
+                onClose={(evt) => {
                   console.log(evt.detail.action);
                   setOpen(false);
                 }}
-                onClosed={evt => console.log(evt.detail.action)}
+                onClosed={(evt) => console.log(evt.detail.action)}
               >
                 <DialogTitle>Dialog Title</DialogTitle>
                 <DialogContent>This is a standard dialog.</DialogContent>
@@ -80,7 +80,7 @@ export default function() {
                 title="This is a simple dialog"
                 body="You can pass the body prop or children."
                 open={open}
-                onClose={evt => {
+                onClose={(evt) => {
                   console.log(evt.detail.action);
                   setOpen(false);
                 }}
@@ -108,16 +108,19 @@ export default function() {
         and then use the `alert`, `prompt` or `confirm` api to open dialogs.
       </DocsP>
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
         // Create a file that exports your queue
         // myQueue.js
         import { createDialogQueue } from '@rmwc/dialog';
 
         export const queue = createDialogQueue();
-      `}
+      `
+        }
       </DocsExample>
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
         // Somewhere at the top level of your app
         // Render the DialogQueue
         import React from 'react';
@@ -137,7 +140,8 @@ export default function() {
           )
         }
         
-      `}
+      `
+        }
       </DocsExample>
 
       <DocsP>
@@ -153,7 +157,8 @@ export default function() {
       </DocsP>
 
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
         // Somewhere else in your app
         // Could be a view, your redux store, anywhere you want...
         import { queue } from './myQueue';
@@ -179,7 +184,8 @@ export default function() {
             outlined: true
           }
         });
-      `}
+      `
+        }
       </DocsExample>
 
       <DocsExample label="Inline Example">
@@ -190,12 +196,13 @@ export default function() {
             const [response, setResponse] = React.useState('____________');
 
             const fireAlert = () =>
-              alert({ title: 'Hello!' }).then(res => setResponse(res));
+              alert({ title: 'Hello!' }).then((res) => setResponse(res));
 
-            const fireConfirm = () => confirm({}).then(res => setResponse(res));
+            const fireConfirm = () =>
+              confirm({}).then((res) => setResponse(res));
 
             const firePrompt = () =>
-              prompt({ inputProps: { outlined: true } }).then(res =>
+              prompt({ inputProps: { outlined: true } }).then((res) =>
                 setResponse(res)
               );
 
@@ -238,7 +245,8 @@ export default function() {
       </DocsP>
 
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
           // Somewhere at the top level of your app
           // Render the RMWC Portal
           // You only have to do this once
@@ -253,7 +261,8 @@ export default function() {
               </div>
             )
           }
-        `}
+        `
+        }
       </DocsExample>
 
       <DocsP>
@@ -282,7 +291,7 @@ export default function() {
                   renderToPortal={renderToPortal}
                   body="Use `renderToPortal` to get around `overflow:hidden` and layout issues."
                   open={open}
-                  onClose={evt => {
+                  onClose={(evt) => {
                     console.log(evt.detail.action);
                     setOpen(false);
                   }}

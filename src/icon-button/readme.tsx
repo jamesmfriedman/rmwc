@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { IconButton } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Icon Buttons"

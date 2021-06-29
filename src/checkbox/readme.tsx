@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { Checkbox } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Checkboxes"
@@ -27,7 +27,7 @@ export default function() {
             <Checkbox
               label="Cookies"
               checked={checked}
-              onChange={evt => setChecked(!!evt.currentTarget.checked)}
+              onChange={(evt) => setChecked(!!evt.currentTarget.checked)}
             />
           );
         }}

@@ -1,8 +1,15 @@
 {
   "npm": {},
   "typescript": {
-    "TabScrollerProps": {
-      "fileName": "src/tabs/tab-scroller.tsx",
+    "TabBarProps": {
+      "documentation": {
+        "contents": [
+          "<p>The TabBar component</p>\n"
+        ],
+        "contentsRaw": "The TabBar component",
+        "metadata": {}
+      },
+      "fileName": "src/tabs/tab-bar.tsx",
       "flags": {
         "isExported": true,
         "isExternal": false,
@@ -14,16 +21,23 @@
         "isStatic": false
       },
       "kind": "interface",
-      "name": "TabScrollerProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-scroller.tsx#L7",
+      "name": "TabBarProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L20",
       "methods": [],
       "properties": [
         {
-          "fileName": "src/tabs/tab-scroller.tsx",
+          "documentation": {
+            "contents": [
+              "<p>The index of the active tab.</p>\n"
+            ],
+            "contentsRaw": "The index of the active tab.",
+            "metadata": {}
+          },
+          "fileName": "src/tabs/tab-bar.tsx",
           "flags": {
             "isExported": true,
             "isExternal": false,
-            "isOptional": false,
+            "isOptional": true,
             "isPrivate": false,
             "isProtected": false,
             "isPublic": false,
@@ -31,9 +45,81 @@
             "isStatic": false
           },
           "kind": "property",
-          "name": "apiRef",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-scroller.tsx#L8",
-          "type": "(api: TabScrollerApi) => void"
+          "name": "activeTabIndex",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L24",
+          "type": "undefined | number"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Advanced: A reference to the MDCFoundation.</p>\n"
+            ],
+            "contentsRaw": "Advanced: A reference to the MDCFoundation.",
+            "metadata": {}
+          },
+          "fileName": "src/tabs/tab-bar.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "foundationRef",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L28",
+          "type": "React.Ref<MDCTabBarFoundation | null>"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Specifies whether the indicator should slide or fade. Defaults to slide.</p>\n"
+            ],
+            "contentsRaw": "Specifies whether the indicator should slide or fade. Defaults to slide.",
+            "metadata": {}
+          },
+          "fileName": "src/tabs/tab-bar.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "indicatorTransition",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L26",
+          "type": "\"slide\" | \"fade\""
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Callback when the active tab changes. Receives event as an argument with event.target.value set to the activeTabIndex. evt.detail = { index: number; }</p>\n"
+            ],
+            "contentsRaw": "Callback when the active tab changes. Receives event as an argument with event.target.value set to the activeTabIndex. evt.detail = { index: number; }",
+            "metadata": {}
+          },
+          "fileName": "src/tabs/tab-bar.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "onActivate",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L22",
+          "type": "undefined | (evt: TabBarOnActivateEventT) => void"
         }
       ]
     },
@@ -101,6 +187,42 @@
           "name": "transition",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-indicator.tsx#L12",
           "type": "\"slide\" | \"fade\""
+        }
+      ]
+    },
+    "TabScrollerProps": {
+      "fileName": "src/tabs/tab-scroller.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "TabScrollerProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-scroller.tsx#L7",
+      "methods": [],
+      "properties": [
+        {
+          "fileName": "src/tabs/tab-scroller.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": false,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "apiRef",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-scroller.tsx#L8",
+          "type": "(api: TabScrollerApi) => void"
         }
       ]
     },
@@ -370,128 +492,6 @@
         }
       ]
     },
-    "TabBarProps": {
-      "documentation": {
-        "contents": [
-          "<p>The TabBar component</p>\n"
-        ],
-        "contentsRaw": "The TabBar component",
-        "metadata": {}
-      },
-      "fileName": "src/tabs/tab-bar.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "TabBarProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L20",
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>The index of the active tab.</p>\n"
-            ],
-            "contentsRaw": "The index of the active tab.",
-            "metadata": {}
-          },
-          "fileName": "src/tabs/tab-bar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "activeTabIndex",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L24",
-          "type": "undefined | number"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Advanced: A reference to the MDCFoundation.</p>\n"
-            ],
-            "contentsRaw": "Advanced: A reference to the MDCFoundation.",
-            "metadata": {}
-          },
-          "fileName": "src/tabs/tab-bar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "foundationRef",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L28",
-          "type": "React.Ref<MDCTabBarFoundation | null>"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Specifies whether the indicator should slide or fade. Defaults to slide.</p>\n"
-            ],
-            "contentsRaw": "Specifies whether the indicator should slide or fade. Defaults to slide.",
-            "metadata": {}
-          },
-          "fileName": "src/tabs/tab-bar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "indicatorTransition",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L26",
-          "type": "\"slide\" | \"fade\""
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Callback when the active tab changes. Receives event as an argument with event.target.value set to the activeTabIndex. evt.detail = { index: number; }</p>\n"
-            ],
-            "contentsRaw": "Callback when the active tab changes. Receives event as an argument with event.target.value set to the activeTabIndex. evt.detail = { index: number; }",
-            "metadata": {}
-          },
-          "fileName": "src/tabs/tab-bar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "onActivate",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L22",
-          "type": "undefined | (evt: TabBarOnActivateEventT) => void"
-        }
-      ]
-    },
     "TabBarContextT": {
       "fileName": "src/tabs/tab-bar-context.tsx",
       "flags": {
@@ -509,8 +509,15 @@
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar-context.tsx#L3",
       "type": ""
     },
-    "TabScrollerApi": {
-      "fileName": "src/tabs/tab-scroller.tsx",
+    "TabBarOnActivateEventT": {
+      "documentation": {
+        "contents": [
+          "<p>TabBar</p>\n"
+        ],
+        "contentsRaw": "TabBar",
+        "metadata": {}
+      },
+      "fileName": "src/tabs/tab-bar.tsx",
       "flags": {
         "isExported": true,
         "isExternal": false,
@@ -522,9 +529,9 @@
         "isStatic": false
       },
       "kind": "type alias",
-      "name": "TabScrollerApi",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-scroller.tsx#L11",
-      "type": ""
+      "name": "TabBarOnActivateEventT",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L15",
+      "type": "RMWC.CustomEventT<>"
     },
     "TabIndicatorApi": {
       "fileName": "src/tabs/tab-indicator.tsx",
@@ -541,6 +548,23 @@
       "kind": "type alias",
       "name": "TabIndicatorApi",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-indicator.tsx#L15",
+      "type": ""
+    },
+    "TabScrollerApi": {
+      "fileName": "src/tabs/tab-scroller.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "type alias",
+      "name": "TabScrollerApi",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-scroller.tsx#L11",
       "type": ""
     },
     "TabOnInteractionEventT": {
@@ -576,30 +600,6 @@
       "name": "TabApi",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab.tsx#L45",
       "type": ""
-    },
-    "TabBarOnActivateEventT": {
-      "documentation": {
-        "contents": [
-          "<p>TabBar</p>\n"
-        ],
-        "contentsRaw": "TabBar",
-        "metadata": {}
-      },
-      "fileName": "src/tabs/tab-bar.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "type alias",
-      "name": "TabBarOnActivateEventT",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/tabs/tab-bar.tsx#L15",
-      "type": "RMWC.CustomEventT<>"
     }
   }
 }

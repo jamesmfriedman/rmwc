@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { Grid, GridCell, GridRow } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Layout Grid"
@@ -52,7 +52,7 @@ export default function() {
 
 export const galleryExample = (
   <Grid>
-    {[1, 2, 3].map(num => (
+    {[1, 2, 3].map((num) => (
       <GridCell
         key={num}
         style={{

@@ -24,7 +24,7 @@
       "name": "IconButtonProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/icon-button/index.tsx#L20",
       "extends": [
-        "WithRippleProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -195,30 +195,6 @@
           "name": "onIcon",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/icon-button/index.tsx#L32",
           "type": "RMWC.IconPropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/icon-button/node_modules/@rmwc/base/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
         }
       ]
     },

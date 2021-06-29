@@ -91,7 +91,7 @@ describe('SnackbarQueue', () => {
     el.unmount();
   });
 
-  it('notifies', async (done) => {
+  it('notifies', async () => {
     const queue = createSnackbarQueue();
     const el = mount(<SnackbarQueue messages={queue.messages} />);
     // check multiple notifications
@@ -128,10 +128,12 @@ describe('SnackbarQueue', () => {
     expect(el.html().includes('myNotificationTitle1')).toBe(true);
     expect(el.html().includes('myNotificationBody1')).toBe(true);
 
-    setTimeout(() => {
-      expect(el.html().includes('myNotificationTitle2')).toBe(true);
-      expect(el.html().includes('myNotificationBody2')).toBe(true);
-      done();
-    }, 800);
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        expect(el.html().includes('myNotificationTitle2')).toBe(true);
+        expect(el.html().includes('myNotificationBody2')).toBe(true);
+        resolve(true);
+      }, 800);
+    });
   });
 });

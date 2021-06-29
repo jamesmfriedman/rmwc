@@ -74,15 +74,15 @@ const SliderDocs = React.lazy(() => import('@rmwc/slider/readme'));
 const SwitchDocs = React.lazy(() => import('@rmwc/switch/readme'));
 const TextfieldDocs = React.lazy(() => import('@rmwc/textfield/readme'));
 const GridDocs = React.lazy(() => import('@rmwc/grid/readme'));
-const LinearProgressDocs = React.lazy(() =>
-  import('@rmwc/linear-progress/readme')
+const LinearProgressDocs = React.lazy(
+  () => import('@rmwc/linear-progress/readme')
 );
-const CircularProgressDocsDocs = React.lazy(() =>
-  import('@rmwc/circular-progress/readme')
+const CircularProgressDocsDocs = React.lazy(
+  () => import('@rmwc/circular-progress/readme')
 );
 const ListDocs = React.lazy(() => import('@rmwc/list/readme'));
-const ListCollapsibleDocs = React.lazy(() =>
-  import('@rmwc/list/readme-collapsible')
+const ListCollapsibleDocs = React.lazy(
+  () => import('@rmwc/list/readme-collapsible')
 );
 const ListVariantsDocs = React.lazy(() => import('@rmwc/list/readme-variants'));
 const MenuDocs = React.lazy(() => import('@rmwc/menu/readme'));
@@ -111,11 +111,12 @@ const Loading = () => (
   </div>
 );
 
-const Loadable = (Component: any) => () => (
-  <React.Suspense fallback={<Loading />}>
-    <Component />
-  </React.Suspense>
-);
+const Loadable = (Component: any) => () =>
+  (
+    <React.Suspense fallback={<Loading />}>
+      <Component />
+    </React.Suspense>
+  );
 
 export type MenuItemT = {
   label: string;
@@ -417,11 +418,11 @@ export const menuContent: MenuItemT[] = [
 export const galleryContent = menuContent
   .reduce<MenuItemT[]>((acc, item) => {
     if ('options' in item) {
-      acc.push(...item.options);
+      acc.push(...(item.options || []));
     } else {
       acc.push(item as MenuItemT);
     }
 
     return acc;
   }, [])
-  .filter(item => !!item.gallery);
+  .filter((item) => !!item.gallery);

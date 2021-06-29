@@ -36,12 +36,12 @@ function Example() {
         label="Click Me"
         checkmark
         selected={selected}
-        onRemove={evt => console.log('onRemove', evt.detail)}
-        onInteraction={evt => {
+        onRemove={(evt) => console.log('onRemove', evt.detail)}
+        onInteraction={(evt) => {
           console.log('onInteraction', evt.detail);
           setSelected(!selected);
         }}
-        onTrailingIconInteraction={evt =>
+        onTrailingIconInteraction={(evt) =>
           console.log('onTrailingIconIteraction', evt.detail)
         }
         trailingIcon="close"
@@ -64,7 +64,7 @@ function Example() {
     pizza: false,
     icecream: false
   });
-  const toggleSelected = key =>
+  const toggleSelected = (key) =>
     setSelected({
       ...selected,
       [key]: !selected[key]
@@ -104,7 +104,7 @@ function Example() {
     pizza: false,
     icecream: false
   });
-  const toggleSelected = key =>
+  const toggleSelected = (key) =>
     setSelected({
       ...selected,
       [key]: !selected[key]

@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/jamesmfriedman/rmwc/tree/master/src/tabs#readme",
   "peerDependencies": {
-    "react": "^16.3.x",
-    "react-dom": "^16.3.x"
+    "react": ">=16.8.x",
+    "react-dom": ">=16.8.x"
   },
   "dependencies": {
     "@material/tab": "^5.1.0",

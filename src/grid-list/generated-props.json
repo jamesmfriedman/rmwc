@@ -270,35 +270,10 @@
       "name": "GridTileIconProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/grid-list/index.tsx#L105",
       "extends": [
-        "IconProps"
+        "any"
       ],
       "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.</p>\n"
-            ],
-            "contentsRaw": "The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.",
-            "metadata": {}
-          },
-          "fileName": "src/grid-list/node_modules/@rmwc/icon/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "inheritedFrom": "IconProps.icon",
-          "type": "RMWC.IconPropT"
-        }
-      ]
+      "properties": []
     },
     "GridTileTitleProps": {
       "documentation": {

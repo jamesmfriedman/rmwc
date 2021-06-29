@@ -24,7 +24,7 @@ function Example() {
     <>
       <Snackbar
         open={open}
-        onClose={evt => setOpen(false)}
+        onClose={(evt) => setOpen(false)}
         message="This is a new message"
         dismissesOnAction
         action={
@@ -38,7 +38,7 @@ function Example() {
       <Button
         raised
         label="Show snackbar"
-        onClick={evt => setOpen(!open)}
+        onClick={(evt) => setOpen(!open)}
       />
     </>
   );
@@ -53,7 +53,7 @@ function Example() {
     <>
       <Snackbar
         open={open}
-        onClose={evt => setOpen(false)}
+        onClose={(evt) => setOpen(false)}
         message="Start aligned, open until dismissed"
         stacked
         dismissesOnAction
@@ -68,7 +68,7 @@ function Example() {
       <Button
         raised
         label="Show start-aligned"
-        onClick={evt => setOpen(!open)}
+        onClick={(evt) => setOpen(!open)}
       />
     </>
   );
@@ -83,15 +83,19 @@ Setup is nice and easy, create a queue object you can pass around in your code b
 
 ```jsx
 
+  `
 // Create a file that exports your queue
 // myQueue.js
 import { createSnackbarQueue } from '@rmwc/snackbar';
 
-export const queue = createSnackbarQueue()
+export const queue = createSnackbarQueue();
+
+
 ```
 
 ```jsx
 
+  `
 // Somewhere at the top level of your app
 // Render the SnackbarQueue
 import React from 'react';
@@ -111,12 +115,16 @@ export default function App() {
     </div>
   )
 }
+
+
+
 ```
 
 The `notify` function was designed to mimic the the built-in browser Notifications api and can accept most of the relevant options (icon, image, title, body, actions, ,etc). It also can accept any of the Snackbar props. Just import your queue, and call the notify method.
 
 ```jsx
 
+  `
 // Somewhere else in your app
 // Could be a view, your redux store, anywhere you want...
 import { queue } from './myQueue';
@@ -145,7 +153,9 @@ queue.notify({
       onClick: () => {}
     },
   ]
-})
+});
+
+
 ```
 
 ```jsx
@@ -208,16 +218,5 @@ A button for a snackbar action.
 | Name | Type | Description |
 |------|------|-------------|
 | `action` | `undefined \| string` | An action returned in evt.detail.reason to the onClose handler. |
-| `children` | `React.ReactNode` | Content specified as children. |
-| `danger` | `undefined \| false \| true` | Used to indicate a dangerous action. |
-| `dense` | `undefined \| false \| true` | Make the Button dense. |
-| `disabled` | `undefined \| false \| true` | Make the button disabled |
-| `icon` | `RMWC.IconPropT` | An Icon for the Button |
-| `label` | `React.ReactNode \| any` | Content specified as a label prop. |
-| `outlined` | `undefined \| false \| true` | Make the button outlined. |
-| `raised` | `undefined \| false \| true` | Make the Button raised. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
-| `trailingIcon` | `RMWC.IconPropT` | A trailing icon for the Button |
-| `unelevated` | `undefined \| false \| true` | Make the button unelevated. |
 
 

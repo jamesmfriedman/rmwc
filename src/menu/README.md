@@ -26,8 +26,8 @@ function Example() {
     <MenuSurfaceAnchor>
       <Menu
         open={open}
-        onSelect={evt => console.log(evt.detail.index)}
-        onClose={evt => setOpen(false)}
+        onSelect={(evt) => console.log(evt.detail.index)}
+        onClose={(evt) => setOpen(false)}
       >
         <MenuItem>Cookies</MenuItem>
         <MenuItem>Pizza</MenuItem>
@@ -36,7 +36,7 @@ function Example() {
         <MenuItem>Icecream</MenuItem>
       </Menu>
 
-      <Button raised onClick={evt => setOpen(!open)}>
+      <Button raised onClick={(evt) => setOpen(!open)}>
         Menu
       </Button>
     </MenuSurfaceAnchor>
@@ -50,13 +50,13 @@ function Example() {
 
   return (
     <MenuSurfaceAnchor>
-      <MenuSurface open={open} onClose={evt => setOpen(false)}>
+      <MenuSurface open={open} onClose={(evt) => setOpen(false)}>
         <div style={{ padding: '1rem', width: '8rem' }}>
           Make the content whatever you want.
         </div>
       </MenuSurface>
 
-      <Button raised onClick={evt => setOpen(!open)}>
+      <Button raised onClick={(evt) => setOpen(!open)}>
         Menu Surface
       </Button>
     </MenuSurfaceAnchor>
@@ -70,11 +70,11 @@ function Example() {
 
   return (
     <MenuSurfaceAnchor>
-      <MenuSurface open={open} onClose={evt => setOpen(false)}>
+      <MenuSurface open={open} onClose={(evt) => setOpen(false)}>
         <div style={{ padding: '1rem', width: '8rem' }}>Menu</div>
       </MenuSurface>
       {/** The handle can be any component you want */}
-      <IconButton icon="menu" onClick={evt => setOpen(!open)} />
+      <IconButton icon="menu" onClick={(evt) => setOpen(!open)} />
     </MenuSurfaceAnchor>
   );
 }
@@ -106,9 +106,8 @@ By default, Menus will attempt to automatically position themselves, but this be
 
 ```jsx
 function Example() {
-  const [anchorCorner, setAnchorCorner] = React.useState(
-    'topLeft'
-  );
+  const [anchorCorner, setAnchorCorner] =
+    React.useState('topLeft');
 
   return (
     <>
@@ -124,7 +123,7 @@ function Example() {
       <Select
         value={anchorCorner}
         label="anchorCorner"
-        onChange={evt => setAnchorCorner(evt.currentTarget.value)}
+        onChange={(evt) => setAnchorCorner(evt.currentTarget.value)}
         options={[
           'topLeft',
           'topRight',
@@ -149,6 +148,7 @@ You can specify any element or selector you want, but the simplest method is to 
 
 ```jsx
 
+  `
   // Somewhere at the top level of your app
   // Render the RMWC Portal
   // You only have to do this once
@@ -163,6 +163,7 @@ You can specify any element or selector you want, but the simplest method is to 
       </div>
     )
   }
+`
 
 ```
 
@@ -184,7 +185,7 @@ function Example() {
         <MenuSurfaceAnchor>
           <Button raised>Open Menu</Button>
           <Menu open renderToPortal={renderToPortal}>
-            {options.map(o => (
+            {options.map((o) => (
               <MenuItem key={o}>{o}</MenuItem>
             ))}
           </Menu>
@@ -192,7 +193,7 @@ function Example() {
       </div>
       <Checkbox
         checked={renderToPortal}
-        onChange={evt => setRenderToPortal(evt.currentTarget.checked)}
+        onChange={(evt) => setRenderToPortal(evt.currentTarget.checked)}
         label="renderToPortal"
       />
     </>
@@ -216,14 +217,6 @@ A menu component for displaying lists items.
 ## MenuItem
 This is just the ListItem component exported from the Menu module for convenience. You can use `ListItem` or `SimpleListItem` components from the List section as long as you add `role="menuitem"` and `tabIndex="0"` to the components for accessibility.
 
-### Props
-
-| Name | Type | Description |
-|------|------|-------------|
-| `activated` | `undefined \| false \| true` | A modifier for an active state. |
-| `disabled` | `undefined \| false \| true` | A modifier for a disabled state. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
-| `selected` | `undefined \| false \| true` | A modifier for a selected state. |
 
 
 ## MenuSurface
@@ -270,16 +263,8 @@ The same as SimpleMenu, but a generic surface.
 
 | Name | Type | Description |
 |------|------|-------------|
-| `anchorCorner` | `AnchorT` | Manually position the menu to one of the corners. |
-| `apiRef` | `undefined \| (api: MenuSurfaceApi \| null) => void` | An internal api for cross component communication. |
 | `children` | `React.ReactNode` | Children to render |
-| `fixed` | `undefined \| false \| true` | Make the menu position fixed. |
-| `foundationRef` | `React.Ref<MDCMenuSurfaceFoundation>` | Advanced: A reference to the MDCFoundation. |
 | `handle` | `ReactElement<any>` | An element that will open the menu when clicked |
-| `onClose` | `undefined \| (evt: MenuSurfaceOnCloseEventT) => void` | Callback for when the menu is closed. |
-| `onOpen` | `undefined \| (evt: MenuSurfaceOnOpenEventT) => void` | Callback for when the menu is opened. |
-| `open` | `undefined \| false \| true` | Opens the menu. |
-| `renderToPortal` | `PortalPropT` | Renders the menu to a portal. Useful for situations where the content might be cutoff by an overflow: hidden container. You can pass "true" to render to the default RMWC portal. |
 | `rootProps` | `Object` | By default, props spread to the Menu component. These will spread to the MenuSurfaceAnchor which is useful for things like overall positioning of the anchor. |
 
 

@@ -19,7 +19,7 @@ import { Select } from '../select';
 import { IconButton } from '../icon-button';
 import { Checkbox } from '../checkbox';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Menus"
@@ -50,8 +50,8 @@ export default function() {
             <MenuSurfaceAnchor>
               <Menu
                 open={open}
-                onSelect={evt => console.log(evt.detail.index)}
-                onClose={evt => setOpen(false)}
+                onSelect={(evt) => console.log(evt.detail.index)}
+                onClose={(evt) => setOpen(false)}
               >
                 <MenuItem>Cookies</MenuItem>
                 <MenuItem>Pizza</MenuItem>
@@ -60,7 +60,7 @@ export default function() {
                 <MenuItem>Icecream</MenuItem>
               </Menu>
 
-              <Button raised onClick={evt => setOpen(!open)}>
+              <Button raised onClick={(evt) => setOpen(!open)}>
                 Menu
               </Button>
             </MenuSurfaceAnchor>
@@ -74,13 +74,13 @@ export default function() {
 
           return (
             <MenuSurfaceAnchor>
-              <MenuSurface open={open} onClose={evt => setOpen(false)}>
+              <MenuSurface open={open} onClose={(evt) => setOpen(false)}>
                 <div style={{ padding: '1rem', width: '8rem' }}>
                   Make the content whatever you want.
                 </div>
               </MenuSurface>
 
-              <Button raised onClick={evt => setOpen(!open)}>
+              <Button raised onClick={(evt) => setOpen(!open)}>
                 Menu Surface
               </Button>
             </MenuSurfaceAnchor>
@@ -94,11 +94,11 @@ export default function() {
 
           return (
             <MenuSurfaceAnchor>
-              <MenuSurface open={open} onClose={evt => setOpen(false)}>
+              <MenuSurface open={open} onClose={(evt) => setOpen(false)}>
                 <div style={{ padding: '1rem', width: '8rem' }}>Menu</div>
               </MenuSurface>
               {/** The handle can be any component you want */}
-              <IconButton icon="menu" onClick={evt => setOpen(!open)} />
+              <IconButton icon="menu" onClick={(evt) => setOpen(!open)} />
             </MenuSurfaceAnchor>
           );
         }}
@@ -134,9 +134,8 @@ export default function() {
 
       <DocsExample>
         {function Example() {
-          const [anchorCorner, setAnchorCorner] = React.useState<any>(
-            'topLeft'
-          );
+          const [anchorCorner, setAnchorCorner] =
+            React.useState<any>('topLeft');
 
           return (
             <>
@@ -152,7 +151,7 @@ export default function() {
               <Select
                 value={anchorCorner}
                 label="anchorCorner"
-                onChange={evt => setAnchorCorner(evt.currentTarget.value)}
+                onChange={(evt) => setAnchorCorner(evt.currentTarget.value)}
                 options={[
                   'topLeft',
                   'topRight',
@@ -183,7 +182,8 @@ export default function() {
       </DocsP>
 
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
           // Somewhere at the top level of your app
           // Render the RMWC Portal
           // You only have to do this once
@@ -198,7 +198,8 @@ export default function() {
               </div>
             )
           }
-        `}
+        `
+        }
       </DocsExample>
 
       <DocsP>
@@ -222,7 +223,7 @@ export default function() {
                 <MenuSurfaceAnchor>
                   <Button raised>Open Menu</Button>
                   <Menu open renderToPortal={renderToPortal}>
-                    {options.map(o => (
+                    {options.map((o) => (
                       <MenuItem key={o}>{o}</MenuItem>
                     ))}
                   </Menu>
@@ -230,7 +231,7 @@ export default function() {
               </div>
               <Checkbox
                 checked={renderToPortal}
-                onChange={evt => setRenderToPortal(evt.currentTarget.checked)}
+                onChange={(evt) => setRenderToPortal(evt.currentTarget.checked)}
                 label="renderToPortal"
               />
             </>

@@ -18,7 +18,7 @@ import {
   SimpleListItem
 } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Lists"

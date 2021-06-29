@@ -425,8 +425,8 @@ export function DocsMarkdown({ fileSrc }: { fileSrc: string }) {
   return src ? (
     <div>
       <ReactMarkdown
-        source={src}
-        renderers={
+        children={src}
+        components={
           {
             heading: ({
               level,

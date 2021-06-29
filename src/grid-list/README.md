@@ -52,11 +52,11 @@ function Example() {
         'headerCaption',
         'twoLineCaption',
         'withIconAlignStart'
-      ].map(key => (
+      ].map((key) => (
         <Checkbox
           key={key}
           label={key}
-          onChange={evt =>
+          onChange={(evt) =>
             setState({ ...state, [key]: evt.currentTarget.checked })
           }
         />
@@ -64,7 +64,7 @@ function Example() {
 
       <Select
         value={state.tileAspect}
-        onChange={evt =>
+        onChange={(evt) =>
           setState({
             ...state,
             tileAspect: String(evt.currentTarget.value)
@@ -100,11 +100,6 @@ A grid tile
 ## GridTileIcon
 The icon for a Grid tile. This is an instance of Icon component.
 
-### Props
-
-| Name | Type | Description |
-|------|------|-------------|
-| `icon` | `RMWC.IconPropT` | The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs. |
 
 
 ## GridTilePrimary

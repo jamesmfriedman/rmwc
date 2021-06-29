@@ -7,7 +7,7 @@ import examples from './generated-examples-collapsible.json';
 import { List, SimpleListItem } from '.';
 import { CollapsibleList, IconButton } from '../rmwc';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Collapsible Lists"

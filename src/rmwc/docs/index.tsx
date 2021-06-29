@@ -4,19 +4,15 @@ import './styles';
 import { Router } from 'react-router-dom';
 import { history } from './common/history';
 import ReactGA from 'react-ga';
-
-import { AppContainer } from 'react-hot-loader';
 import App from './views/app';
 import { RMWCProvider } from '@rmwc/provider';
 
 const renderApp = (Component: React.ComponentType<any>) => {
   ReactDOM.render(
     <RMWCProvider>
-      <AppContainer>
-        <Router history={history}>
-          <Component location={window.location.href} />
-        </Router>
-      </AppContainer>
+      <Router history={history}>
+        <Component location={window.location.href} />
+      </Router>
     </RMWCProvider>,
     document.getElementById('root')
   );

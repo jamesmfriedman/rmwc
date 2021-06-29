@@ -22,7 +22,7 @@
       },
       "kind": "interface",
       "name": "RMWCProviderProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L51",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L47",
       "methods": [],
       "properties": [
         {
@@ -46,7 +46,7 @@
           },
           "kind": "property",
           "name": "children",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L61",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L57",
           "type": "React.ReactNode"
         },
         {
@@ -70,8 +70,8 @@
           },
           "kind": "property",
           "name": "icon",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L55",
-          "type": "Partial<IconOptions>"
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L51",
+          "type": "Partial<RMWC.IconOptions>"
         },
         {
           "documentation": {
@@ -94,7 +94,7 @@
           },
           "kind": "property",
           "name": "ripple",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L53",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L49",
           "type": "undefined | false | true"
         },
         {
@@ -118,7 +118,7 @@
           },
           "kind": "property",
           "name": "tooltip",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L57",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L53",
           "type": "Partial<TooltipOptions>"
         },
         {
@@ -142,7 +142,7 @@
           },
           "kind": "property",
           "name": "typography",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L59",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/provider/index.tsx#L55",
           "type": "Partial<TypographyOptions>"
         }
       ]

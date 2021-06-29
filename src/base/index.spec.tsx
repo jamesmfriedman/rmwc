@@ -101,7 +101,7 @@ describe('FoundationElement', () => {
     expect(inst.root.getProp('title')).toBe(undefined);
   });
 
-  it('FoundationElement: handles prop merging', async (done) => {
+  it('FoundationElement: handles prop merging', async () => {
     let blueChangeCalled = false;
     let redChangeCalled = false;
     const el = mount(
@@ -127,7 +127,6 @@ describe('FoundationElement', () => {
     expect(mergedProps.style).toEqual({ color: 'red', background: 'blue' });
     expect(blueChangeCalled).toBe(true);
     expect(redChangeCalled).toBe(true);
-    done();
   });
 });
 

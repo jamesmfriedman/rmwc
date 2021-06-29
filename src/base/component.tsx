@@ -41,22 +41,23 @@ export const useClassNames = <Props extends { [key: string]: any }>(
   return classNamesFunc(
     props.className,
     ...(!!props.theme ? parseThemeOptions(props.theme) : []),
+    // @ts-ignore
     ...(typeof classNames === 'function' ? classNames(props) : classNames)
   );
 };
 
-export const mergeRefs = (
-  ...refs: Array<React.Ref<any> | undefined | null>
-) => (el: any) => {
-  for (const ref of refs) {
-    if (typeof ref === 'function') {
-      ref(el);
-    } else if (ref && 'current' in ref) {
-      // @ts-ignore
-      ref.current = el;
+export const mergeRefs =
+  (...refs: Array<React.Ref<any> | undefined | null>) =>
+  (el: any) => {
+    for (const ref of refs) {
+      if (typeof ref === 'function') {
+        ref(el);
+      } else if (ref && 'current' in ref) {
+        // @ts-ignore
+        ref.current = el;
+      }
     }
-  }
-};
+  };
 
 export const handleRef = <T extends any>(
   ref: React.Ref<T> | null | undefined,

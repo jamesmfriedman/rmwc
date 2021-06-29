@@ -18,8 +18,8 @@ Sliders will automatically layout themselves on window resize. If you need to ma
 
 ```jsx
 <Slider
-  onInput={evt => console.log(evt)}
-  onChange={evt => console.log(evt)}
+  onInput={(evt) => console.log(evt)}
+  onChange={(evt) => console.log(evt)}
 />
 ```
 
@@ -31,8 +31,8 @@ function Example() {
   return (
     <Slider
       value={value}
-      onChange={evt => setValue(evt.detail.value)}
-      onInput={evt => setValue(evt.detail.value)}
+      onChange={(evt) => setValue(evt.detail.value)}
+      onInput={(evt) => setValue(evt.detail.value)}
       discrete
       step={1}
     />

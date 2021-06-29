@@ -13,7 +13,7 @@ import {
   ImageListLabel
 } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Image Lists"
@@ -47,7 +47,7 @@ export default function() {
             'images/photos/3x2-15.jpg',
             'images/photos/3x2-16.jpg',
             'images/photos/2x3-7.jpg'
-          ].map(src => (
+          ].map((src) => (
             <ImageListItem
               key={src}
               style={{ margin: '2px', width: 'calc(100% / 5 - 4.2px)' }}
@@ -92,7 +92,7 @@ export default function() {
             'images/photos/3x2-15.jpg',
             'images/photos/2x3-7.jpg',
             'images/photos/3x2-16.jpg'
-          ].map(src => (
+          ].map((src) => (
             <ImageListItem key={src} style={{ marginBottom: '16px' }}>
               <ImageListImage src={src} />
               <ImageListSupporting>
@@ -147,7 +147,7 @@ export const galleryExample = (
       'images/photos/3x2-11.jpg',
       'images/photos/3x2-13.jpg',
       'images/photos/3x2-14.jpg'
-    ].map(src => (
+    ].map((src) => (
       <ImageListItem key={src} style={{ marginBottom: '16px' }}>
         <ImageListImage src={src} />
       </ImageListItem>

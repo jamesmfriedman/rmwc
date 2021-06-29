@@ -7,7 +7,7 @@ import examples from './generated-examples.json';
 import { Typography } from '.';
 import { RMWCProvider } from '../provider';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Typography"

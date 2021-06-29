@@ -15,7 +15,7 @@ import {
   SimpleTopAppBar
 } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Top App Bar"

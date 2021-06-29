@@ -107,7 +107,6 @@ A ListItem component.
 |------|------|-------------|
 | `activated` | `undefined \| false \| true` | A modifier for an active state. |
 | `disabled` | `undefined \| false \| true` | A modifier for a disabled state. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
 | `selected` | `undefined \| false \| true` | A modifier for a selected state. |
 
 
@@ -124,21 +123,11 @@ Secondary text for the ListItem
 ## ListItemGraphic
 A graphic / icon for the ListItem
 
-### Props
-
-| Name | Type | Description |
-|------|------|-------------|
-| `icon` | `RMWC.IconPropT` | The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs. |
 
 
 ## ListItemMeta
 Meta content for the ListItem. This can either by an icon by setting the `icon` prop, or any other kind of content.
 
-### Props
-
-| Name | Type | Description |
-|------|------|-------------|
-| `icon` | `RMWC.IconPropT` | The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs. |
 
 
 ## ListDivider
@@ -169,7 +158,6 @@ A simple list item template.
 | `graphic` | `RMWC.IconPropT` | A graphic icon for the ListItem. |
 | `meta` | `React.ReactNode` | Meta content for the ListItem instead of an icon. |
 | `metaIcon` | `RMWC.IconPropT` | A meta icon for the ListItem |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
 | `secondaryText` | `React.ReactNode` | Secondary Text for the ListItem. |
 | `selected` | `undefined \| false \| true` | A modifier for a selected state. |
 | `text` | `React.ReactNode` | Text for the ListItem. |

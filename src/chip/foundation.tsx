@@ -99,16 +99,17 @@ export const useChipFoundation = (props: ChipProps & ChipHTMLProps) => {
   });
 
   const { rootEl, trailingIconEl, foundation } = foundationWithElements;
+  const { onClick, onKeyDown } = props;
 
   const handleInteraction = useCallback(
     (
       evt: React.MouseEvent & React.KeyboardEvent & MouseEvent & KeyboardEvent
     ) => {
-      evt.type === 'click' && props.onClick?.(evt as any);
-      evt.type === 'keydown' && props.onKeyDown?.(evt as any);
+      evt.type === 'click' && onClick?.(evt as any);
+      evt.type === 'keydown' && onKeyDown?.(evt as any);
       return foundation.handleInteraction(evt);
     },
-    [foundation, props.onClick, props.onKeyDown]
+    [foundation, onClick, onKeyDown]
   );
 
   const handleTransitionEnd = useCallback(

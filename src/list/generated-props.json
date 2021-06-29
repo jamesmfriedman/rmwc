@@ -1551,6 +1551,561 @@
         }
       ]
     },
+    "ListItemProps": {
+      "documentation": {
+        "contents": [
+          "<p>A ListItem component.</p>\n"
+        ],
+        "contentsRaw": "A ListItem component.",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListItemProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L9",
+      "extends": [
+        "any"
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "documentation": {
+            "contents": [
+              "<p>A modifier for an active state.</p>\n"
+            ],
+            "contentsRaw": "A modifier for an active state.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "activated",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L13",
+          "type": "undefined | false | true"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>A modifier for a disabled state.</p>\n"
+            ],
+            "contentsRaw": "A modifier for a disabled state.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "disabled",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L15",
+          "type": "undefined | false | true"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>A modifier for a selected state.</p>\n"
+            ],
+            "contentsRaw": "A modifier for a selected state.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "selected",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L11",
+          "type": "undefined | false | true"
+        }
+      ]
+    },
+    "ListItemTextProps": {
+      "documentation": {
+        "contents": [
+          "<p>Text Wrapper for the ListItem</p>\n"
+        ],
+        "contentsRaw": "Text Wrapper for the ListItem",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListItemTextProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L37",
+      "methods": [],
+      "properties": []
+    },
+    "ListItemPrimaryTextProps": {
+      "documentation": {
+        "contents": [
+          "<p>Primary Text for the ListItem</p>\n"
+        ],
+        "contentsRaw": "Primary Text for the ListItem",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListItemPrimaryTextProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L48",
+      "methods": [],
+      "properties": []
+    },
+    "ListItemSecondaryTextProps": {
+      "documentation": {
+        "contents": [
+          "<p>Secondary text for the ListItem</p>\n"
+        ],
+        "contentsRaw": "Secondary text for the ListItem",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListItemSecondaryTextProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L59",
+      "methods": [],
+      "properties": []
+    },
+    "ListItemGraphicProps": {
+      "documentation": {
+        "contents": [
+          "<p>A graphic / icon for the ListItem</p>\n"
+        ],
+        "contentsRaw": "A graphic / icon for the ListItem",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListItemGraphicProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L70",
+      "extends": [
+        "any"
+      ],
+      "methods": [],
+      "properties": []
+    },
+    "ListItemMetaProps": {
+      "documentation": {
+        "contents": [
+          "<p>Meta content for the ListItem. This can either by an icon by setting the <code>icon</code> prop, or any other kind of content.</p>\n"
+        ],
+        "contentsRaw": "Meta content for the ListItem. This can either by an icon by setting the `icon` prop, or any other kind of content.",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListItemMetaProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L83",
+      "extends": [
+        "any"
+      ],
+      "methods": [],
+      "properties": []
+    },
+    "ListGroupProps": {
+      "documentation": {
+        "contents": [
+          "<p>A container to group ListItems</p>\n"
+        ],
+        "contentsRaw": "A container to group ListItems",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListGroupProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L110",
+      "methods": [],
+      "properties": []
+    },
+    "ListGroupSubheaderProps": {
+      "documentation": {
+        "contents": [
+          "<p>A subheader for the ListGroup</p>\n"
+        ],
+        "contentsRaw": "A subheader for the ListGroup",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListGroupSubheaderProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L122",
+      "methods": [],
+      "properties": []
+    },
+    "ListDividerProps": {
+      "documentation": {
+        "contents": [
+          "<p>A divider for the List</p>\n"
+        ],
+        "contentsRaw": "A divider for the List",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "ListDividerProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L133",
+      "methods": [],
+      "properties": []
+    },
+    "SimpleListItemProps": {
+      "documentation": {
+        "contents": [
+          "<p>A simple list item template.</p>\n"
+        ],
+        "contentsRaw": "A simple list item template.",
+        "metadata": {}
+      },
+      "fileName": "src/list/list-item.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "SimpleListItemProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L152",
+      "extends": [
+        "ListItemProps"
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "documentation": {
+            "contents": [
+              "<p>A modifier for an active state.</p>\n"
+            ],
+            "contentsRaw": "A modifier for an active state.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "activated",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L13",
+          "inheritedFrom": "ListItemProps.activated",
+          "type": "undefined | false | true"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Children to render</p>\n"
+            ],
+            "contentsRaw": "Children to render",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "children",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L164",
+          "type": "React.ReactNode"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>A modifier for a disabled state.</p>\n"
+            ],
+            "contentsRaw": "A modifier for a disabled state.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "disabled",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L15",
+          "inheritedFrom": "ListItemProps.disabled",
+          "type": "undefined | false | true"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>A graphic icon for the ListItem.</p>\n"
+            ],
+            "contentsRaw": "A graphic icon for the ListItem.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "graphic",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L158",
+          "type": "RMWC.IconPropT"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Meta content for the ListItem instead of an icon.</p>\n"
+            ],
+            "contentsRaw": "Meta content for the ListItem instead of an icon.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "meta",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L162",
+          "type": "React.ReactNode"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>A meta icon for the ListItem</p>\n"
+            ],
+            "contentsRaw": "A meta icon for the ListItem",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "metaIcon",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L160",
+          "type": "RMWC.IconPropT"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Secondary Text for the ListItem.</p>\n"
+            ],
+            "contentsRaw": "Secondary Text for the ListItem.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "secondaryText",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L156",
+          "type": "React.ReactNode"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>A modifier for a selected state.</p>\n"
+            ],
+            "contentsRaw": "A modifier for a selected state.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "selected",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L11",
+          "inheritedFrom": "ListItemProps.selected",
+          "type": "undefined | false | true"
+        },
+        {
+          "documentation": {
+            "contents": [
+              "<p>Text for the ListItem.</p>\n"
+            ],
+            "contentsRaw": "Text for the ListItem.",
+            "metadata": {}
+          },
+          "fileName": "src/list/list-item.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "text",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L154",
+          "type": "React.ReactNode"
+        }
+      ]
+    },
     "ListProps": {
       "documentation": {
         "contents": [
@@ -1945,659 +2500,6 @@
           "name": "setAttributeForElementIndex",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list.tsx#L39",
           "type": "(index: number, attr: string, value: any) => void"
-        }
-      ]
-    },
-    "ListItemProps": {
-      "documentation": {
-        "contents": [
-          "<p>A ListItem component.</p>\n"
-        ],
-        "contentsRaw": "A ListItem component.",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListItemProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L9",
-      "extends": [
-        "WithRippleProps"
-      ],
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>A modifier for an active state.</p>\n"
-            ],
-            "contentsRaw": "A modifier for an active state.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "activated",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L13",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A modifier for a disabled state.</p>\n"
-            ],
-            "contentsRaw": "A modifier for a disabled state.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "disabled",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L15",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/list/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A modifier for a selected state.</p>\n"
-            ],
-            "contentsRaw": "A modifier for a selected state.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "selected",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L11",
-          "type": "undefined | false | true"
-        }
-      ]
-    },
-    "ListItemTextProps": {
-      "documentation": {
-        "contents": [
-          "<p>Text Wrapper for the ListItem</p>\n"
-        ],
-        "contentsRaw": "Text Wrapper for the ListItem",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListItemTextProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L37",
-      "methods": [],
-      "properties": []
-    },
-    "ListItemPrimaryTextProps": {
-      "documentation": {
-        "contents": [
-          "<p>Primary Text for the ListItem</p>\n"
-        ],
-        "contentsRaw": "Primary Text for the ListItem",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListItemPrimaryTextProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L48",
-      "methods": [],
-      "properties": []
-    },
-    "ListItemSecondaryTextProps": {
-      "documentation": {
-        "contents": [
-          "<p>Secondary text for the ListItem</p>\n"
-        ],
-        "contentsRaw": "Secondary text for the ListItem",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListItemSecondaryTextProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L59",
-      "methods": [],
-      "properties": []
-    },
-    "ListItemGraphicProps": {
-      "documentation": {
-        "contents": [
-          "<p>A graphic / icon for the ListItem</p>\n"
-        ],
-        "contentsRaw": "A graphic / icon for the ListItem",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListItemGraphicProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L70",
-      "extends": [
-        "IconProps"
-      ],
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.</p>\n"
-            ],
-            "contentsRaw": "The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.",
-            "metadata": {}
-          },
-          "fileName": "src/list/node_modules/@rmwc/icon/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "inheritedFrom": "IconProps.icon",
-          "type": "RMWC.IconPropT"
-        }
-      ]
-    },
-    "ListItemMetaProps": {
-      "documentation": {
-        "contents": [
-          "<p>Meta content for the ListItem. This can either by an icon by setting the <code>icon</code> prop, or any other kind of content.</p>\n"
-        ],
-        "contentsRaw": "Meta content for the ListItem. This can either by an icon by setting the `icon` prop, or any other kind of content.",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListItemMetaProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L83",
-      "extends": [
-        "IconProps"
-      ],
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.</p>\n"
-            ],
-            "contentsRaw": "The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.",
-            "metadata": {}
-          },
-          "fileName": "src/list/node_modules/@rmwc/icon/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "inheritedFrom": "IconProps.icon",
-          "type": "RMWC.IconPropT"
-        }
-      ]
-    },
-    "ListGroupProps": {
-      "documentation": {
-        "contents": [
-          "<p>A container to group ListItems</p>\n"
-        ],
-        "contentsRaw": "A container to group ListItems",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListGroupProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L110",
-      "methods": [],
-      "properties": []
-    },
-    "ListGroupSubheaderProps": {
-      "documentation": {
-        "contents": [
-          "<p>A subheader for the ListGroup</p>\n"
-        ],
-        "contentsRaw": "A subheader for the ListGroup",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListGroupSubheaderProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L122",
-      "methods": [],
-      "properties": []
-    },
-    "ListDividerProps": {
-      "documentation": {
-        "contents": [
-          "<p>A divider for the List</p>\n"
-        ],
-        "contentsRaw": "A divider for the List",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "ListDividerProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L133",
-      "methods": [],
-      "properties": []
-    },
-    "SimpleListItemProps": {
-      "documentation": {
-        "contents": [
-          "<p>A simple list item template.</p>\n"
-        ],
-        "contentsRaw": "A simple list item template.",
-        "metadata": {}
-      },
-      "fileName": "src/list/list-item.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "SimpleListItemProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L152",
-      "extends": [
-        "ListItemProps"
-      ],
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>A modifier for an active state.</p>\n"
-            ],
-            "contentsRaw": "A modifier for an active state.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "activated",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L13",
-          "inheritedFrom": "ListItemProps.activated",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Children to render</p>\n"
-            ],
-            "contentsRaw": "Children to render",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "children",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L164",
-          "type": "React.ReactNode"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A modifier for a disabled state.</p>\n"
-            ],
-            "contentsRaw": "A modifier for a disabled state.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "disabled",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L15",
-          "inheritedFrom": "ListItemProps.disabled",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A graphic icon for the ListItem.</p>\n"
-            ],
-            "contentsRaw": "A graphic icon for the ListItem.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "graphic",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L158",
-          "type": "RMWC.IconPropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Meta content for the ListItem instead of an icon.</p>\n"
-            ],
-            "contentsRaw": "Meta content for the ListItem instead of an icon.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "meta",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L162",
-          "type": "React.ReactNode"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A meta icon for the ListItem</p>\n"
-            ],
-            "contentsRaw": "A meta icon for the ListItem",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "metaIcon",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L160",
-          "type": "RMWC.IconPropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/list/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Secondary Text for the ListItem.</p>\n"
-            ],
-            "contentsRaw": "Secondary Text for the ListItem.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "secondaryText",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L156",
-          "type": "React.ReactNode"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A modifier for a selected state.</p>\n"
-            ],
-            "contentsRaw": "A modifier for a selected state.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "selected",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L11",
-          "inheritedFrom": "ListItemProps.selected",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Text for the ListItem.</p>\n"
-            ],
-            "contentsRaw": "Text for the ListItem.",
-            "metadata": {}
-          },
-          "fileName": "src/list/list-item.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "text",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/list/list-item.tsx#L154",
-          "type": "React.ReactNode"
         }
       ]
     },

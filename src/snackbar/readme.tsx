@@ -12,7 +12,7 @@ import {
 } from './';
 import { Button } from '@rmwc/button';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Snackbars"
@@ -38,7 +38,7 @@ export default function() {
             <>
               <Snackbar
                 open={open}
-                onClose={evt => setOpen(false)}
+                onClose={(evt) => setOpen(false)}
                 message="This is a new message"
                 dismissesOnAction
                 action={
@@ -52,7 +52,7 @@ export default function() {
               <Button
                 raised
                 label="Show snackbar"
-                onClick={evt => setOpen(!open)}
+                onClick={(evt) => setOpen(!open)}
               />
             </>
           );
@@ -67,7 +67,7 @@ export default function() {
             <>
               <Snackbar
                 open={open}
-                onClose={evt => setOpen(false)}
+                onClose={(evt) => setOpen(false)}
                 message="Start aligned, open until dismissed"
                 stacked
                 dismissesOnAction
@@ -82,7 +82,7 @@ export default function() {
               <Button
                 raised
                 label="Show start-aligned"
-                onClick={evt => setOpen(!open)}
+                onClick={(evt) => setOpen(!open)}
               />
             </>
           );
@@ -104,16 +104,19 @@ export default function() {
         component, and then use the `notify` function to send notifications.
       </DocsP>
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
         // Create a file that exports your queue
         // myQueue.js
         import { createSnackbarQueue } from '@rmwc/snackbar';
 
         export const queue = createSnackbarQueue();
-      `}
+      `
+        }
       </DocsExample>
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
         // Somewhere at the top level of your app
         // Render the SnackbarQueue
         import React from 'react';
@@ -134,7 +137,8 @@ export default function() {
           )
         }
         
-      `}
+      `
+        }
       </DocsExample>
 
       <DocsP>
@@ -145,7 +149,8 @@ export default function() {
       </DocsP>
 
       <DocsExample codeOnly>
-        {/* jsx */ `
+        {
+          /* jsx */ `
         // Somewhere else in your app
         // Could be a view, your redux store, anywhere you want...
         import { queue } from './myQueue';
@@ -175,7 +180,8 @@ export default function() {
             },
           ]
         });
-      `}
+      `
+        }
       </DocsExample>
 
       <DocsExample label="Inline Example">

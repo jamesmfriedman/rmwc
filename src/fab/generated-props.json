@@ -24,7 +24,7 @@
       "name": "FabProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/fab/index.tsx#L8",
       "extends": [
-        "WithRippleProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -147,30 +147,6 @@
           "name": "mini",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/fab/index.tsx#L10",
           "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/fab/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
         },
         {
           "documentation": {

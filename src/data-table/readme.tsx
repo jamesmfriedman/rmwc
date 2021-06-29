@@ -19,7 +19,7 @@ import { Select } from '../select';
 import { Checkbox } from '../checkbox';
 import { Switch } from '../switch';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Data Tables"
@@ -53,7 +53,7 @@ export default function() {
                     <DataTableHeadCell
                       alignEnd
                       sort={sortDir}
-                      onSortChange={sortDir => {
+                      onSortChange={(sortDir) => {
                         // @ts-ignore
                         setSortDir(sortDir);
                         console.log(sortDir);
@@ -140,13 +140,13 @@ export default function() {
                   label="Sticky Rows"
                   options={['0', '1']}
                   value={String(rows)}
-                  onChange={evt => setRows(Number(evt.currentTarget.value))}
+                  onChange={(evt) => setRows(Number(evt.currentTarget.value))}
                 />
                 <Select
                   label="Sticky Cols"
                   options={['0', '1']}
                   value={String(cols)}
-                  onChange={evt => setCols(Number(evt.currentTarget.value))}
+                  onChange={(evt) => setCols(Number(evt.currentTarget.value))}
                 />
               </div>
             </>
@@ -188,7 +188,7 @@ export default function() {
                         <Checkbox
                           // @ts-ignore
                           checked={checked[i]}
-                          onChange={evt => {
+                          onChange={(evt) => {
                             // @ts-ignore
                             checked[i] = evt.currentTarget.checked;
                             setChecked({ ...checked });
@@ -224,7 +224,7 @@ export default function() {
 
       <DocsExample>
         <SimpleDataTable
-          getRowProps={row => {
+          getRowProps={(row) => {
             return row[1] > 100 ? { activated: true } : {};
           }}
           getCellProps={(cell, index, isHead) => {

@@ -279,20 +279,22 @@ export const useSelectFoundation = (
 
   const { selectedTextEl, rootEl } = elements;
 
+  const { onFocus } = props;
   const handleFocus = useCallback(
     (evt: any) => {
-      props.onFocus?.(evt);
+      onFocus?.(evt);
       foundation.handleFocus();
     },
-    [props.onFocus, foundation]
+    [onFocus, foundation]
   );
 
+  const { onBlur } = props;
   const handleBlur = useCallback(
     (evt: any) => {
-      props.onBlur?.(evt);
+      onBlur?.(evt);
       foundation.handleBlur();
     },
-    [props.onBlur, foundation]
+    [onBlur, foundation]
   );
 
   const handleClick = useCallback(
@@ -319,12 +321,13 @@ export const useSelectFoundation = (
     [foundation, selectedTextEl.ref, rootEl.ref]
   );
 
+  const { onKeyDown } = props;
   const handleKeydown = useCallback(
     (evt: any) => {
-      props.onKeyDown?.(evt);
+      onKeyDown?.(evt);
       foundation.handleKeydown(evt);
     },
-    [foundation, props.onKeyDown]
+    [foundation, onKeyDown]
   );
 
   const handleMenuSelected = useCallback(

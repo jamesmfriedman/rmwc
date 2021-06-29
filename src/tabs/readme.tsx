@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { TabBar, Tab } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Tabs"
@@ -44,7 +44,7 @@ export default function() {
           return (
             <TabBar
               activeTabIndex={activeTab}
-              onActivate={evt => setActiveTab(evt.detail.index)}
+              onActivate={(evt) => setActiveTab(evt.detail.index)}
             >
               <Tab>Cookies</Tab>
               <Tab>Pizza</Tab>

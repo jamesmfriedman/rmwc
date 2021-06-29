@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { FormField } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Form Fields"

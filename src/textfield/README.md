@@ -130,7 +130,6 @@ A TextField component for accepting text input from a user.
 | `label` | `React.ReactNode` | A label for the input. |
 | `outlined` | `undefined \| false \| true` | Outline the TextField. |
 | `required` | `undefined \| false \| true` | Makes the Textfield required. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
 | `rootProps` | `Object` | By default, props spread to the input. These props are for the component's root container. |
 | `textarea` | `undefined \| false \| true` | Makes a multiline TextField. |
 | `trailingIcon` | `RMWC.IconPropT` | Add a trailing icon. |

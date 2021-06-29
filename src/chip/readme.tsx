@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { Chip, ChipSet } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Chips"
@@ -42,12 +42,12 @@ export default function() {
                 label="Click Me"
                 checkmark
                 selected={selected}
-                onRemove={evt => console.log('onRemove', evt.detail)}
-                onInteraction={evt => {
+                onRemove={(evt) => console.log('onRemove', evt.detail)}
+                onInteraction={(evt) => {
                   console.log('onInteraction', evt.detail);
                   setSelected(!selected);
                 }}
-                onTrailingIconInteraction={evt =>
+                onTrailingIconInteraction={(evt) =>
                   console.log('onTrailingIconIteraction', evt.detail)
                 }
                 trailingIcon="close"
@@ -81,7 +81,7 @@ export default function() {
             icecream: false
           });
           //@ts-ignore
-          const toggleSelected = key =>
+          const toggleSelected = (key) =>
             setSelected({
               ...selected,
               //@ts-ignore
@@ -123,7 +123,7 @@ export default function() {
             icecream: false
           });
           //@ts-ignore
-          const toggleSelected = key =>
+          const toggleSelected = (key) =>
             setSelected({
               ...selected,
               //@ts-ignore

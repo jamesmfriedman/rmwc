@@ -6,7 +6,7 @@ import examples from './generated-examples.json';
 
 import { Switch } from '.';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Switches"
@@ -35,7 +35,7 @@ export default function() {
           return (
             <Switch
               checked={checked}
-              onChange={evt => setChecked(!!evt.currentTarget.checked)}
+              onChange={(evt) => setChecked(!!evt.currentTarget.checked)}
               label="Cookies"
             />
           );

@@ -9,7 +9,7 @@ import { Button } from '../button';
 import { IconButton } from '../icon-button';
 import { Avatar } from '../avatar';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Badges"

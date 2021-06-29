@@ -10,7 +10,7 @@ import { Button } from '../button';
 import { Avatar } from '../avatar';
 import { RMWCProvider } from '../provider';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Tooltips"
@@ -124,7 +124,7 @@ export default function() {
             'topRight',
             'bottomLeft',
             'bottomRight'
-          ].map(align => (
+          ].map((align) => (
             //@ts-ignore
             <Tooltip key={align} content={`Align: ${align}`} align={align}>
               <IconButton icon="trip_origin" />

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const childProcess = require('child_process');
 
-['16.8.x', '16.9.x', '16.10.x', '16.11.x', '16.12.x'].forEach(version => {
+['16.12.x', '17.0.x'].forEach((version) => {
   if (!fs.existsSync(`react-versions/react-${version}`)) {
     childProcess.execSync(
       `npm i react-test-renderer@${version} react-dom@${version} react@${version} --prefix react-versions/react-${version}`,

@@ -34,7 +34,7 @@ function Example() {
   return (
     <TabBar
       activeTabIndex={activeTab}
-      onActivate={evt => setActiveTab(evt.detail.index)}
+      onActivate={(evt) => setActiveTab(evt.detail.index)}
     >
       <Tab>Cookies</Tab>
       <Tab>Pizza</Tab>

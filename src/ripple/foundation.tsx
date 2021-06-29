@@ -54,19 +54,13 @@ export const useRippleFoundation = (
           evtType: K,
           handler: SpecificEventListener<K>
         ): void =>
-          document.documentElement.addEventListener(
-            evtType,
-            handler,
-            { passive: true }
-          ),
+          document.documentElement.addEventListener(evtType, handler, {
+            passive: true
+          }),
         deregisterDocumentInteractionHandler: <K extends EventType>(
           evtType: K,
           handler: SpecificEventListener<K>
-        ) =>
-          document.documentElement.removeEventListener(
-            evtType,
-            handler
-          ),
+        ) => document.documentElement.removeEventListener(evtType, handler),
         registerResizeHandler: (
           handler: SpecificEventListener<'resize'>
         ): void => window.addEventListener('resize', handler),
@@ -105,73 +99,81 @@ export const useRippleFoundation = (
     [foundation]
   );
 
+  const { onFocus } = props;
   const handleFocus = useCallback(
     (evt: React.FocusEvent<HTMLElement>) => {
-      props.onFocus?.(evt);
+      onFocus?.(evt);
       foundation.handleFocus();
     },
-    [foundation, props.onFocus]
+    [foundation, onFocus]
   );
 
+  const { onBlur } = props;
   const handleBlur = useCallback(
     (evt: React.FocusEvent<HTMLElement>) => {
-      props.onBlur?.(evt);
+      onBlur?.(evt);
       foundation.handleBlur();
     },
-    [foundation, props.onBlur]
+    [foundation, onBlur]
   );
 
+  const { onMouseDown } = props;
   const handleMouseDown = useCallback(
     (evt: React.MouseEvent<HTMLElement> & MouseEvent) => {
-      props.onMouseDown?.(evt);
+      onMouseDown?.(evt);
       if (!isTouched.current) {
         activateRipple(evt);
       }
 
       isTouched.current = false;
     },
-    [props.onMouseDown, activateRipple]
+    [onMouseDown, activateRipple]
   );
 
+  const { onMouseUp } = props;
   const handleMouseUp = useCallback(
     (evt: React.MouseEvent<HTMLElement>) => {
-      props.onMouseUp?.(evt);
+      onMouseUp?.(evt);
       deactivateRipple(evt);
     },
-    [props.onMouseUp, deactivateRipple]
+    [onMouseUp, deactivateRipple]
   );
 
+  const { onTouchStart } = props;
   const handleTouchStart = useCallback(
     (evt: React.TouchEvent<HTMLElement> & TouchEvent) => {
       isTouched.current = true;
-      props.onTouchStart?.(evt);
+      onTouchStart?.(evt);
       activateRipple(evt);
     },
-    [props.onTouchStart, activateRipple]
+    [onTouchStart, activateRipple]
   );
 
+  const { onTouchEnd } = props;
   const handleTouchEnd = useCallback(
     (evt: React.TouchEvent<HTMLElement>) => {
-      props.onTouchEnd?.(evt);
+      onTouchEnd?.(evt);
       deactivateRipple(evt);
     },
-    [props.onTouchEnd, deactivateRipple]
+    [onTouchEnd, deactivateRipple]
   );
 
+  const { onKeyDown } = props;
   const handleKeyDown = useCallback(
     (evt: React.KeyboardEvent<HTMLElement> & KeyboardEvent) => {
-      props.onKeyDown?.(evt);
+      onKeyDown?.(evt);
       activateRipple(evt);
     },
-    [props.onKeyDown, activateRipple]
+    [onKeyDown, activateRipple]
   );
 
+  const { onKeyUp } = props;
   const handleKeyUp = useCallback(
     (evt: React.KeyboardEvent<HTMLElement>) => {
-      props.onKeyUp?.(evt);
+      onKeyUp?.(evt);
       deactivateRipple(evt);
     },
-    [props.onKeyUp, deactivateRipple]
+    [onKeyUp, deactivateRipple]
   );
 
   rootEl.setProp('onFocus', handleFocus, true);

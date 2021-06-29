@@ -24,7 +24,7 @@
       "name": "AvatarProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/avatar/index.tsx#L13",
       "extends": [
-        "WithRippleProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -99,30 +99,6 @@
           "name": "name",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/avatar/index.tsx#L19",
           "type": "undefined | string"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/avatar/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
         },
         {
           "documentation": {

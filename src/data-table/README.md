@@ -28,7 +28,7 @@ function Example() {
             <DataTableHeadCell
               alignEnd
               sort={sortDir}
-              onSortChange={sortDir => {
+              onSortChange={(sortDir) => {
                 setSortDir(sortDir);
                 console.log(sortDir);
               }}
@@ -110,13 +110,13 @@ function Example() {
           label="Sticky Rows"
           options={['0', '1']}
           value={String(rows)}
-          onChange={evt => setRows(Number(evt.currentTarget.value))}
+          onChange={(evt) => setRows(Number(evt.currentTarget.value))}
         />
         <Select
           label="Sticky Cols"
           options={['0', '1']}
           value={String(cols)}
-          onChange={evt => setCols(Number(evt.currentTarget.value))}
+          onChange={(evt) => setCols(Number(evt.currentTarget.value))}
         />
       </div>
     </>
@@ -153,7 +153,7 @@ function Example() {
               <DataTableCell hasFormControl>
                 <Checkbox
                   checked={checked[i]}
-                  onChange={evt => {
+                  onChange={(evt) => {
                     checked[i] = evt.currentTarget.checked;
                     setChecked({ ...checked });
                   }}
@@ -185,7 +185,7 @@ If you just need to throw a table on the screen, you can pass an array of data t
 
 ```jsx
 <SimpleDataTable
-  getRowProps={row => {
+  getRowProps={(row) => {
     return row[1] > 100 ? { activated: true } : {};
   }}
   getCellProps={(cell, index, isHead) => {

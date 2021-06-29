@@ -79,7 +79,6 @@ The Button component.
 | `label` | `React.ReactNode \| any` | Content specified as a label prop. |
 | `outlined` | `undefined \| false \| true` | Make the button outlined. |
 | `raised` | `undefined \| false \| true` | Make the Button raised. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
 | `trailingIcon` | `RMWC.IconPropT` | A trailing icon for the Button |
 | `unelevated` | `undefined \| false \| true` | Make the button unelevated. |
 

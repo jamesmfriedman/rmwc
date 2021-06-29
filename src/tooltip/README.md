@@ -116,7 +116,7 @@ function AlignmentExample() {
     'topRight',
     'bottomLeft',
     'bottomRight'
-  ].map(align => (
+  ].map((align) => (
     <Tooltip key={align} content={`Align: ${align}`} align={align}>
       <IconButton icon="trip_origin" />
     </Tooltip>

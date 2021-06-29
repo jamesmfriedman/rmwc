@@ -7,7 +7,7 @@ import examples from './generated-examples.json';
 import { Button } from '.';
 import { CircularProgress } from '../circular-progress';
 
-export default function () {
+export default function Readme() {
   return (
     <Docs
       title="Buttons"

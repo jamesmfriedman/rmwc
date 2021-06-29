@@ -10,7 +10,7 @@ import { Button } from '../button';
 import { List, SimpleListItem } from '../list';
 import { Chip } from '../chip';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Circular Progress"
@@ -76,7 +76,7 @@ export default function() {
 
 export const galleryExample = (
   <>
-    {[0.3, 0.6, 0.9].map(num => (
+    {[0.3, 0.6, 0.9].map((num) => (
       <CircularProgress
         key={num}
         style={{ margin: '0.4rem' }}

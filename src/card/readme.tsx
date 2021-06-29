@@ -19,7 +19,7 @@ import {
 import { Typography } from '../typography';
 import { ListDivider } from '../list';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Cards"

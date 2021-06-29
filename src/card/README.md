@@ -220,37 +220,10 @@ A group of supplemental action icons, displayed on the right side of the card (i
 ## CardActionIcon
 A card action Icon
 
-### Props
-
-| Name | Type | Description |
-|------|------|-------------|
-| `checked` | `undefined \| false \| true` | Controls the on / off state of the a toggleable button. |
-| `disabled` | `undefined \| false \| true` | Makes the button disabled |
-| `foundationRef` | `React.Ref<MDCIconButtonToggleFoundation>` | Advanced: A reference to the MDCFoundation. Only for Toggleable buttons. |
-| `icon` | `RMWC.IconPropT` | Icon for the button |
-| `label` | `undefined \| string` | Apply an aria label. |
-| `onChange` | `undefined \| (evt: IconButtonOnChangeEventT) => void` | An onChange callback that receives a custom event. evt.detail = { isOn: boolean } |
-| `onIcon` | `RMWC.IconPropT` | If specified, renders a toggle with this icon as the on state. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
 
 
 ## CardActionButton
 A card action Button
 
-### Props
-
-| Name | Type | Description |
-|------|------|-------------|
-| `children` | `React.ReactNode` | Content specified as children. |
-| `danger` | `undefined \| false \| true` | Used to indicate a dangerous action. |
-| `dense` | `undefined \| false \| true` | Make the Button dense. |
-| `disabled` | `undefined \| false \| true` | Make the button disabled |
-| `icon` | `RMWC.IconPropT` | An Icon for the Button |
-| `label` | `React.ReactNode \| any` | Content specified as a label prop. |
-| `outlined` | `undefined \| false \| true` | Make the button outlined. |
-| `raised` | `undefined \| false \| true` | Make the Button raised. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
-| `trailingIcon` | `RMWC.IconPropT` | A trailing icon for the Button |
-| `unelevated` | `undefined \| false \| true` | Make the button unelevated. |
 
 

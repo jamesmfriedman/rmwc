@@ -24,7 +24,7 @@
       "name": "TextFieldProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/textfield/index.tsx#L26",
       "extends": [
-        "WithRippleProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -343,30 +343,6 @@
         {
           "documentation": {
             "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/textfield/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
-        },
-        {
-          "documentation": {
-            "contents": [
               "<p>By default, props spread to the input. These props are for the component&#39;s root container.</p>\n"
             ],
             "contentsRaw": "By default, props spread to the input. These props are for the component's root container.",
@@ -545,7 +521,7 @@
       "name": "TextFieldCharacterCountProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/textfield/index.tsx#L248",
       "extends": [
-        "IconProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -565,30 +541,6 @@
           "name": "apiRef",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/textfield/index.tsx#L249",
           "type": "undefined | (api: TextFieldCharacterCountApi | null) => void"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.</p>\n"
-            ],
-            "contentsRaw": "The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.",
-            "metadata": {}
-          },
-          "fileName": "src/textfield/node_modules/@rmwc/icon/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "inheritedFrom": "IconProps.icon",
-          "type": "RMWC.IconPropT"
         }
       ]
     },
@@ -756,7 +708,7 @@
       "name": "TextFieldIconProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/textfield/index.tsx#L297",
       "extends": [
-        "IconProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -776,30 +728,6 @@
           "name": "apiRef",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/textfield/index.tsx#L298",
           "type": "undefined | (api: TextFieldIconApi | null) => void"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.</p>\n"
-            ],
-            "contentsRaw": "The icon to use. This can be a string for a font icon, a url, or whatever the selected strategy needs.",
-            "metadata": {}
-          },
-          "fileName": "src/textfield/node_modules/@rmwc/icon/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "inheritedFrom": "IconProps.icon",
-          "type": "RMWC.IconPropT"
         },
         {
           "fileName": "src/textfield/index.tsx",

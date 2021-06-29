@@ -9,7 +9,7 @@ import { Button } from '../button';
 import { Chip } from '../chip';
 import { TextField } from '../textfield';
 
-export default function() {
+export default function Readme() {
   return (
     <Docs
       title="Avatars"

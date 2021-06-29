@@ -1,6 +1,148 @@
 {
   "npm": {},
   "typescript": {
+    "SnackbarQueueMessage": {
+      "fileName": "src/snackbar/snackbar-queue.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "SnackbarQueueMessage",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L22",
+      "extends": [
+        "any",
+        "SnackbarQueueMessageBase",
+        "any"
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "fileName": "src/snackbar/snackbar-queue.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "actions",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L17",
+          "inheritedFrom": "SnackbarQueueMessageBase.actions",
+          "type": "Array<NotificationAction | any>"
+        },
+        {
+          "fileName": "src/snackbar/snackbar-queue.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "body",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L15",
+          "inheritedFrom": "SnackbarQueueMessageBase.body",
+          "type": "React.ReactNode"
+        },
+        {
+          "fileName": "src/snackbar/snackbar-queue.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "icon",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L16",
+          "inheritedFrom": "SnackbarQueueMessageBase.icon",
+          "type": "IconPropT"
+        },
+        {
+          "fileName": "src/snackbar/snackbar-queue.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": true,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "title",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L14",
+          "inheritedFrom": "SnackbarQueueMessageBase.title",
+          "type": "React.ReactNode"
+        }
+      ]
+    },
+    "SnackbarQueueProps": {
+      "documentation": {
+        "contents": [
+          "<p>A snackbar queue for rendering messages</p>\n"
+        ],
+        "contentsRaw": "A snackbar queue for rendering messages",
+        "metadata": {}
+      },
+      "fileName": "src/snackbar/snackbar-queue.tsx",
+      "flags": {
+        "isExported": true,
+        "isExternal": false,
+        "isOptional": false,
+        "isPrivate": false,
+        "isProtected": false,
+        "isPublic": false,
+        "isRest": false,
+        "isStatic": false
+      },
+      "kind": "interface",
+      "name": "SnackbarQueueProps",
+      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L28",
+      "extends": [
+        "any"
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "fileName": "src/snackbar/snackbar-queue.tsx",
+          "flags": {
+            "isExported": true,
+            "isExternal": false,
+            "isOptional": false,
+            "isPrivate": false,
+            "isProtected": false,
+            "isPublic": false,
+            "isRest": false,
+            "isStatic": false
+          },
+          "kind": "property",
+          "name": "messages",
+          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L29",
+          "type": "ArrayEmitter<SnackbarQueueMessage>"
+        }
+      ]
+    },
     "SnackbarProps": {
       "documentation": {
         "contents": [
@@ -324,7 +466,7 @@
       "name": "SnackbarActionProps",
       "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L162",
       "extends": [
-        "ButtonProps"
+        "any"
       ],
       "methods": [],
       "properties": [
@@ -351,966 +493,6 @@
           "name": "action",
           "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L164",
           "type": "undefined | string"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Content specified as children.</p>\n"
-            ],
-            "contentsRaw": "Content specified as children.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "children",
-          "inheritedFrom": "ButtonProps.children",
-          "type": "React.ReactNode"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Used to indicate a dangerous action.</p>\n"
-            ],
-            "contentsRaw": "Used to indicate a dangerous action.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "danger",
-          "inheritedFrom": "ButtonProps.danger",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Make the Button dense.</p>\n"
-            ],
-            "contentsRaw": "Make the Button dense.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "dense",
-          "inheritedFrom": "ButtonProps.dense",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Make the button disabled</p>\n"
-            ],
-            "contentsRaw": "Make the button disabled",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "disabled",
-          "inheritedFrom": "ButtonProps.disabled",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>An Icon for the Button</p>\n"
-            ],
-            "contentsRaw": "An Icon for the Button",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "inheritedFrom": "ButtonProps.icon",
-          "type": "RMWC.IconPropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Content specified as a label prop.</p>\n"
-            ],
-            "contentsRaw": "Content specified as a label prop.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "label",
-          "inheritedFrom": "ButtonProps.label",
-          "type": "React.ReactNode | any"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Make the button outlined.</p>\n"
-            ],
-            "contentsRaw": "Make the button outlined.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "outlined",
-          "inheritedFrom": "ButtonProps.outlined",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Make the Button raised.</p>\n"
-            ],
-            "contentsRaw": "Make the Button raised.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "raised",
-          "inheritedFrom": "ButtonProps.raised",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Adds a ripple effect to the component</p>\n"
-            ],
-            "contentsRaw": "Adds a ripple effect to the component",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/types/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "ripple",
-          "inheritedFrom": "WithRippleProps.ripple",
-          "type": "RipplePropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A trailing icon for the Button</p>\n"
-            ],
-            "contentsRaw": "A trailing icon for the Button",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "trailingIcon",
-          "inheritedFrom": "ButtonProps.trailingIcon",
-          "type": "RMWC.IconPropT"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Make the button unelevated.</p>\n"
-            ],
-            "contentsRaw": "Make the button unelevated.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/node_modules/@rmwc/button/index.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "unelevated",
-          "inheritedFrom": "ButtonProps.unelevated",
-          "type": "undefined | false | true"
-        }
-      ]
-    },
-    "SnackbarQueueMessage": {
-      "fileName": "src/snackbar/snackbar-queue.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "SnackbarQueueMessage",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L22",
-      "extends": [
-        "SnackbarProps",
-        "SnackbarQueueMessageBase",
-        "any"
-      ],
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>One or more actions to add to the snackbar.</p>\n"
-            ],
-            "contentsRaw": "One or more actions to add to the snackbar.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "action",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L32",
-          "inheritedFrom": "SnackbarProps.action",
-          "type": "React.ReactNode | React.ReactNode[]"
-        },
-        {
-          "fileName": "src/snackbar/snackbar-queue.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "actions",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L17",
-          "inheritedFrom": "SnackbarQueueMessageBase.actions",
-          "type": "Array<NotificationAction | any>"
-        },
-        {
-          "fileName": "src/snackbar/snackbar-queue.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "body",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L15",
-          "inheritedFrom": "SnackbarQueueMessageBase.body",
-          "type": "React.ReactNode"
-        },
-        {
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "dismissIcon",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L40",
-          "inheritedFrom": "SnackbarProps.dismissIcon",
-          "type": "boolean | string"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Whether or not your want clicking an action to close the Snackbar.</p>\n"
-            ],
-            "contentsRaw": "Whether or not your want clicking an action to close the Snackbar.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "dismissesOnAction",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L42",
-          "inheritedFrom": "SnackbarProps.dismissesOnAction",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Advanced: A reference to the MDCFoundation.</p>\n"
-            ],
-            "contentsRaw": "Advanced: A reference to the MDCFoundation.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "foundationRef",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L46",
-          "inheritedFrom": "SnackbarProps.foundationRef",
-          "type": "React.Ref<MDCSnackbarFoundation | null>"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>An icon for the snackbar</p>\n"
-            ],
-            "contentsRaw": "An icon for the snackbar",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L44",
-          "inheritedFrom": "SnackbarProps.icon",
-          "type": "RMWC.IconPropT"
-        },
-        {
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "leading",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L38",
-          "inheritedFrom": "SnackbarProps.leading",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A string or other renderable JSX to be used as the message body.</p>\n"
-            ],
-            "contentsRaw": "A string or other renderable JSX to be used as the message body.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "message",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L30",
-          "inheritedFrom": "SnackbarProps.message",
-          "type": "React.ReactNode"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A callback thats fired when the Snackbar hides. evt.detail = { reason?: string }</p>\n"
-            ],
-            "contentsRaw": "A callback thats fired when the Snackbar hides. evt.detail = { reason?: string }",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "onClose",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L28",
-          "inheritedFrom": "SnackbarProps.onClose",
-          "type": "undefined | (evt: SnackbarOnCloseEventT) => void"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A callback thats fired when the Snackbar shows.</p>\n"
-            ],
-            "contentsRaw": "A callback thats fired when the Snackbar shows.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "onOpen",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L26",
-          "inheritedFrom": "SnackbarProps.onOpen",
-          "type": "undefined | (evt: SnackbarOnOpenEventT) => void"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Show the Snackbar.</p>\n"
-            ],
-            "contentsRaw": "Show the Snackbar.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "open",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L24",
-          "inheritedFrom": "SnackbarProps.open",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Places the action underneath the message text.</p>\n"
-            ],
-            "contentsRaw": "Places the action underneath the message text.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "stacked",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L36",
-          "inheritedFrom": "SnackbarProps.stacked",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Milliseconds to show the Snackbar for. Set to -1 to show indefinitely.</p>\n"
-            ],
-            "contentsRaw": "Milliseconds to show the Snackbar for. Set to -1 to show indefinitely.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "timeout",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L34",
-          "inheritedFrom": "SnackbarProps.timeout",
-          "type": "undefined | number"
-        },
-        {
-          "fileName": "src/snackbar/snackbar-queue.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "title",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L14",
-          "inheritedFrom": "SnackbarQueueMessageBase.title",
-          "type": "React.ReactNode"
-        }
-      ]
-    },
-    "SnackbarQueueProps": {
-      "documentation": {
-        "contents": [
-          "<p>A snackbar queue for rendering messages</p>\n"
-        ],
-        "contentsRaw": "A snackbar queue for rendering messages",
-        "metadata": {}
-      },
-      "fileName": "src/snackbar/snackbar-queue.tsx",
-      "flags": {
-        "isExported": true,
-        "isExternal": false,
-        "isOptional": false,
-        "isPrivate": false,
-        "isProtected": false,
-        "isPublic": false,
-        "isRest": false,
-        "isStatic": false
-      },
-      "kind": "interface",
-      "name": "SnackbarQueueProps",
-      "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L28",
-      "extends": [
-        "SnackbarProps"
-      ],
-      "methods": [],
-      "properties": [
-        {
-          "documentation": {
-            "contents": [
-              "<p>One or more actions to add to the snackbar.</p>\n"
-            ],
-            "contentsRaw": "One or more actions to add to the snackbar.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "action",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L32",
-          "inheritedFrom": "SnackbarProps.action",
-          "type": "React.ReactNode | React.ReactNode[]"
-        },
-        {
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "dismissIcon",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L40",
-          "inheritedFrom": "SnackbarProps.dismissIcon",
-          "type": "boolean | string"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Whether or not your want clicking an action to close the Snackbar.</p>\n"
-            ],
-            "contentsRaw": "Whether or not your want clicking an action to close the Snackbar.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "dismissesOnAction",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L42",
-          "inheritedFrom": "SnackbarProps.dismissesOnAction",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Advanced: A reference to the MDCFoundation.</p>\n"
-            ],
-            "contentsRaw": "Advanced: A reference to the MDCFoundation.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "foundationRef",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L46",
-          "inheritedFrom": "SnackbarProps.foundationRef",
-          "type": "React.Ref<MDCSnackbarFoundation | null>"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>An icon for the snackbar</p>\n"
-            ],
-            "contentsRaw": "An icon for the snackbar",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "icon",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L44",
-          "inheritedFrom": "SnackbarProps.icon",
-          "type": "RMWC.IconPropT"
-        },
-        {
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "leading",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L38",
-          "inheritedFrom": "SnackbarProps.leading",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A string or other renderable JSX to be used as the message body.</p>\n"
-            ],
-            "contentsRaw": "A string or other renderable JSX to be used as the message body.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "message",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L30",
-          "inheritedFrom": "SnackbarProps.message",
-          "type": "React.ReactNode"
-        },
-        {
-          "fileName": "src/snackbar/snackbar-queue.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": false,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "messages",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar-queue.tsx#L29",
-          "type": "ArrayEmitter<SnackbarQueueMessage>"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A callback thats fired when the Snackbar hides. evt.detail = { reason?: string }</p>\n"
-            ],
-            "contentsRaw": "A callback thats fired when the Snackbar hides. evt.detail = { reason?: string }",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "onClose",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L28",
-          "inheritedFrom": "SnackbarProps.onClose",
-          "type": "undefined | (evt: SnackbarOnCloseEventT) => void"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>A callback thats fired when the Snackbar shows.</p>\n"
-            ],
-            "contentsRaw": "A callback thats fired when the Snackbar shows.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "onOpen",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L26",
-          "inheritedFrom": "SnackbarProps.onOpen",
-          "type": "undefined | (evt: SnackbarOnOpenEventT) => void"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Show the Snackbar.</p>\n"
-            ],
-            "contentsRaw": "Show the Snackbar.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "open",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L24",
-          "inheritedFrom": "SnackbarProps.open",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Places the action underneath the message text.</p>\n"
-            ],
-            "contentsRaw": "Places the action underneath the message text.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "stacked",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L36",
-          "inheritedFrom": "SnackbarProps.stacked",
-          "type": "undefined | false | true"
-        },
-        {
-          "documentation": {
-            "contents": [
-              "<p>Milliseconds to show the Snackbar for. Set to -1 to show indefinitely.</p>\n"
-            ],
-            "contentsRaw": "Milliseconds to show the Snackbar for. Set to -1 to show indefinitely.",
-            "metadata": {}
-          },
-          "fileName": "src/snackbar/snackbar.tsx",
-          "flags": {
-            "isExported": true,
-            "isExternal": false,
-            "isOptional": true,
-            "isPrivate": false,
-            "isProtected": false,
-            "isPublic": false,
-            "isRest": false,
-            "isStatic": false
-          },
-          "kind": "property",
-          "name": "timeout",
-          "sourceUrl": "https://github.com/jamesmfriedman/rmwc/blob/master/src/snackbar/snackbar.tsx#L34",
-          "inheritedFrom": "SnackbarProps.timeout",
-          "type": "undefined | number"
         }
       ]
     },

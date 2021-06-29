@@ -21,11 +21,11 @@ function Example() {
     <>
       <Dialog
         open={open}
-        onClose={evt => {
+        onClose={(evt) => {
           console.log(evt.detail.action);
           setOpen(false);
         }}
-        onClosed={evt => console.log(evt.detail.action)}
+        onClosed={(evt) => console.log(evt.detail.action)}
       >
         <DialogTitle>Dialog Title</DialogTitle>
         <DialogContent>This is a standard dialog.</DialogContent>
@@ -58,7 +58,7 @@ function Example() {
         title="This is a simple dialog"
         body="You can pass the body prop or children."
         open={open}
-        onClose={evt => {
+        onClose={(evt) => {
           console.log(evt.detail.action);
           setOpen(false);
         }}
@@ -80,15 +80,19 @@ Setup is nice and easy, create a queue object you can pass around in your code b
 
 ```jsx
 
+  `
 // Create a file that exports your queue
 // myQueue.js
 import { createDialogQueue } from '@rmwc/dialog';
 
-export const queue = createDialogQueue()
+export const queue = createDialogQueue();
+
+
 ```
 
 ```jsx
 
+  `
 // Somewhere at the top level of your app
 // Render the DialogQueue
 import React from 'react';
@@ -107,12 +111,16 @@ export default function App() {
     </div>
   )
 }
+
+
+
 ```
 
 The `alert`, `confirm`, and `prompt` functions were designed to mimic the the built-in browser methods with a couple of small difference. First, they all return a promise. The promise will always resolve successfully with the response indicating the appropriate action. `alert` the response will be `accept` for clicking the ok button, or `close`. `confirm` will resolve `true` or `false`, and `prompt` will resolve with the value entered into the input, or `null` if the closed the dialog. Second, all methods the methods accept any valid prop for `SimpleDialog`.
 
 ```jsx
 
+  `
 // Somewhere else in your app
 // Could be a view, your redux store, anywhere you want...
 import { queue } from './myQueue';
@@ -137,7 +145,9 @@ queue.prompt({
   inputProps: {
     outlined: true
   }
-})
+});
+
+
 ```
 
 ```jsx
@@ -148,12 +158,13 @@ queue.prompt({
     const [response, setResponse] = React.useState('____________');
 
     const fireAlert = () =>
-      alert({ title: 'Hello!' }).then(res => setResponse(res));
+      alert({ title: 'Hello!' }).then((res) => setResponse(res));
 
-    const fireConfirm = () => confirm({}).then(res => setResponse(res));
+    const fireConfirm = () =>
+      confirm({}).then((res) => setResponse(res));
 
     const firePrompt = () =>
-      prompt({ inputProps: { outlined: true } }).then(res =>
+      prompt({ inputProps: { outlined: true } }).then((res) =>
         setResponse(res)
       );
 
@@ -190,6 +201,7 @@ You can specify any element or selector you want, but the simplest method is to 
 
 ```jsx
 
+  `
   // Somewhere at the top level of your app
   // Render the RMWC Portal
   // You only have to do this once
@@ -204,6 +216,7 @@ You can specify any element or selector you want, but the simplest method is to 
       </div>
     )
   }
+`
 
 ```
 
@@ -230,7 +243,7 @@ function Example() {
           renderToPortal={renderToPortal}
           body="Use `renderToPortal` to get around `overflow:hidden` and layout issues."
           open={open}
-          onClose={evt => {
+          onClose={(evt) => {
             console.log(evt.detail.action);
             setOpen(false);
           }}
@@ -301,18 +314,7 @@ Action buttons for the Dialog.
 | Name | Type | Description |
 |------|------|-------------|
 | `action` | `undefined \| string` | An action returned in evt.detail.action to the onClose handler. |
-| `children` | `React.ReactNode` | Content specified as children. |
-| `danger` | `undefined \| false \| true` | Used to indicate a dangerous action. |
-| `dense` | `undefined \| false \| true` | Make the Button dense. |
-| `disabled` | `undefined \| false \| true` | Make the button disabled |
-| `icon` | `RMWC.IconPropT` | An Icon for the Button |
 | `isDefaultAction` | `undefined \| false \| true` | Indicates this is the default selected action when pressing enter |
-| `label` | `React.ReactNode \| any` | Content specified as a label prop. |
-| `outlined` | `undefined \| false \| true` | Make the button outlined. |
-| `raised` | `undefined \| false \| true` | Make the Button raised. |
-| `ripple` | `RipplePropT` | Adds a ripple effect to the component |
-| `trailingIcon` | `RMWC.IconPropT` | A trailing icon for the Button |
-| `unelevated` | `undefined \| false \| true` | Make the button unelevated. |
 
 
 ## SimpleDialog
